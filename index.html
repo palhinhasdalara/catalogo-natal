@@ -415,6 +415,230 @@
             line-height: 1;
         }
 
+        /* Banner / Botão de Sabores */
+        .flavors-banner-wrap {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .btn-open-flavors {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            background: #ffffff;
+            color: var(--wine);
+            border: 1.5px solid var(--gold);
+            padding: 11px 22px;
+            border-radius: 50px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(116, 21, 35, 0.08);
+            transition: all 0.2s ease;
+        }
+
+        .btn-open-flavors:hover {
+            background: var(--wine);
+            color: #ffffff;
+            border-color: var(--wine);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(116, 21, 35, 0.16);
+        }
+
+        .btn-open-flavors svg {
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+        }
+
+        .card-flavor-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: none;
+            border: none;
+            color: var(--wine);
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 4px 0;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            font-family: inherit;
+            transition: color 0.15s ease;
+            width: fit-content;
+        }
+
+        .card-flavor-link:hover {
+            color: var(--gold);
+        }
+
+        /* Modal de Sabores */
+        .flavors-modal-card {
+            background: #ffffff;
+            border-radius: 20px;
+            max-width: 620px;
+            width: 100%;
+            max-height: 88vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(45, 38, 36, 0.35);
+            position: relative;
+            animation: modalFadeIn 0.25s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.96) translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .flavors-modal-header {
+            padding: 22px 24px 16px;
+            border-bottom: 1px solid var(--border-card);
+            background: linear-gradient(180deg, #fdfbf8 0%, #ffffff 100%);
+            position: relative;
+        }
+
+        .flavors-modal-header h3 {
+            font-family: 'Lora', serif;
+            font-size: 1.45rem;
+            font-weight: 600;
+            color: var(--wine);
+            margin-bottom: 4px;
+        }
+
+        .flavors-modal-header p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .flavors-modal-close {
+            position: absolute;
+            top: 16px;
+            right: 18px;
+            background: #f7ede3;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 22px;
+            line-height: 1;
+            color: var(--wine);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .flavors-modal-close:hover {
+            background: #eddccb;
+        }
+
+        .flavors-modal-body {
+            padding: 22px 24px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .flavor-category {
+            background: #faf7f2;
+            border: 1px solid var(--border-card);
+            border-radius: 14px;
+            padding: 16px 18px;
+        }
+
+        .flavor-category-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .flavor-category-header h4 {
+            font-family: 'Lora', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--wine);
+        }
+
+        .flavor-count-badge {
+            font-size: 0.74rem;
+            font-weight: 700;
+            color: var(--gold);
+            background: #ffffff;
+            border: 1px solid var(--gold-light);
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+
+        .flavor-category-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            font-style: italic;
+            line-height: 1.45;
+        }
+
+        .flavor-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .flavor-tag {
+            background: #ffffff;
+            border: 1px solid #e5d8cb;
+            color: var(--text-main);
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+            transition: all 0.15s ease;
+        }
+
+        .flavor-tag:hover {
+            border-color: var(--gold);
+            background-color: #fffdf9;
+        }
+
+        .flavor-tag.highlight {
+            border-color: var(--gold);
+            background-color: #fbf4ea;
+            color: var(--wine);
+            font-weight: 600;
+        }
+
+        .flavors-modal-footer {
+            padding: 14px 24px;
+            border-top: 1px solid var(--border-card);
+            background: #fdfbf8;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .flavors-modal-footer p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
         /* Responsividade para Celulares e Ajuste em Iframes */
         @media (max-width: 600px) {
             .wrapper {
@@ -424,6 +648,28 @@
             header {
                 padding: 32px 16px 22px;
                 margin-bottom: 24px;
+            }
+
+            .flavors-banner-wrap {
+                margin-bottom: 22px;
+            }
+
+            .btn-open-flavors {
+                width: 100%;
+                justify-content: center;
+                font-size: 0.86rem;
+                padding: 10px 16px;
+            }
+
+            .flavors-modal-card {
+                max-height: 90vh;
+                border-radius: 16px;
+            }
+
+            .flavors-modal-header,
+            .flavors-modal-body,
+            .flavors-modal-footer {
+                padding: 16px;
             }
 
             .catalog-list {
@@ -500,6 +746,18 @@
 
     <main class="wrapper">
 
+        <!-- Banner de Sabores -->
+        <div class="flavors-banner-wrap">
+            <button type="button" class="btn-open-flavors" onclick="openFlavorsModal()">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="8" x2="12" y2="12" />
+                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
+                <span>Conheça os <strong>Sabores de Palha Italiana</strong> (Clássicas &amp; Cremosas)</span>
+            </button>
+        </div>
+
         <div class="catalog-list">
 
             <!-- Item 1: Brownie na Cinta -->
@@ -560,6 +818,9 @@
                             Caixinha vermelha com padronagem geométrica e laço em cetim dourado. Recheada com
                             <strong>3 Brownies</strong> ou <strong>3 Palhas Italianas</strong> artesanais.
                         </p>
+                        <button type="button" class="card-flavor-link" onclick="openFlavorsModal()">
+                            ✨ Ver sabores disponíveis de palha
+                        </button>
                     </div>
                     <a href="https://wa.me/5582993941787?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20a%20Caixinha%20com%20La%C3%A7o%20Dourado%20(R$%2026,00)."
                         target="_blank" class="btn-wa-item">
@@ -595,6 +856,9 @@
                             Embalagem presenteável decorada com tampa em visor transparente. Acompanha 4 unidades
                             generosas das nossas palhas artesanais de textura perfeita.
                         </p>
+                        <button type="button" class="card-flavor-link" onclick="openFlavorsModal()">
+                            ✨ Ver opções de sabores clássicos
+                        </button>
                     </div>
                     <a href="https://wa.me/5582993941787?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20a%20Caixa%20com%204%20Palhas%20Italianas%20(R$%2030,00)."
                         target="_blank" class="btn-wa-item">
@@ -630,6 +894,9 @@
                             Caixa temática com tampa geométrica natalina e forração de palha natural. Composta por 1
                             pote de palha cremosa com colherzinha, 1 brownie artesanal e 1 palha tradicional.
                         </p>
+                        <button type="button" class="card-flavor-link" onclick="openFlavorsModal()">
+                            ✨ Ver sabores clássicos e cremosos
+                        </button>
                     </div>
                     <a href="https://wa.me/5582993941787?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20a%20Caixa%20Trio%20Degusta%C3%A7%C3%A3o%20(R$%2030,00)."
                         target="_blank" class="btn-wa-item">
@@ -665,6 +932,9 @@
                             Nossa palha cremosa no ponto perfeito para comer de colher (250 g). Pote de vidro
                             reutilizável decorado com tampa metálica e rótulo delicado de Natal.
                         </p>
+                        <button type="button" class="card-flavor-link" onclick="openFlavorsModal()">
+                            ✨ Ver os 13 sabores cremosos
+                        </button>
                     </div>
                     <a href="https://wa.me/5582993941787?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20o%20Pote%20de%20Palha%20Cremosa%20250g%20(R$%2032,00)."
                         target="_blank" class="btn-wa-item">
@@ -683,13 +953,20 @@
             <h4>Encomendas de Fim de Ano</h4>
             <p>Produção artesanal sob demanda com vagas limitadas para o Natal.<br>Combine sua data de entrega e
                 consulte os sabores disponíveis diretamente pelo WhatsApp.</p>
-            <a href="https://wa.me/5582993941787" target="_blank" class="wa-display-link">
-                <svg viewBox="0 0 24 24">
-                    <path
-                        d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.883 2.802.883h.001c3.18 0 5.766-2.586 5.767-5.766.001-3.18-2.585-5.77-5.77-5.77zm0 10.453c-.768 0-1.522-.206-2.18-.598l-.156-.092-1.619.425.432-1.579-.102-.162c-.432-.688-.66-1.488-.66-2.31 0-2.378 1.935-4.313 4.316-4.313 2.379 0 4.315 1.935 4.315 4.313-.001 2.378-1.936 4.316-4.316 4.316zm7.969-4.687c-.033-.055-.121-.088-.253-.154-.132-.066-.781-.385-.902-.429-.121-.044-.209-.066-.297.066s-.341.429-.418.517-.154.099-.286.033c-.132-.066-.557-.205-1.061-.654-.392-.349-.657-.78-.734-.912s-.008-.204.058-.27c.06-.059.132-.154.198-.231s.088-.132.132-.22c.044-.088.022-.165-.011-.231-.033-.066-.297-.715-.407-.98-.107-.258-.216-.223-.297-.227l-.253-.005c-.088 0-.231.033-.352.165s-.462.451-.462 1.1-.473 1.287.528 1.342c.055.008 1.837 2.806 4.451 3.934.622.269 1.108.429 1.488.55.626.199 1.196.171 1.646.104.502-.075 1.54-.629 1.76-1.236.22-.607.22-1.127.154-1.236z" />
-                </svg>
-                WhatsApp: (82) 99394-1787
-            </a>
+            <div
+                style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center; margin-top: 16px;">
+                <button type="button" class="btn-open-flavors" onclick="openFlavorsModal()"
+                    style="padding: 8px 18px; font-size: 0.86rem;">
+                    🍬 Ver Lista de Sabores
+                </button>
+                <a href="https://wa.me/5582993941787" target="_blank" class="wa-display-link" style="margin-top: 0;">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.883 2.802.883h.001c3.18 0 5.766-2.586 5.767-5.766.001-3.18-2.585-5.77-5.77-5.77zm0 10.453c-.768 0-1.522-.206-2.18-.598l-.156-.092-1.619.425.432-1.579-.102-.162c-.432-.688-.66-1.488-.66-2.31 0-2.378 1.935-4.313 4.316-4.313 2.379 0 4.315 1.935 4.315 4.313-.001 2.378-1.936 4.316-4.316 4.316zm7.969-4.687c-.033-.055-.121-.088-.253-.154-.132-.066-.781-.385-.902-.429-.121-.044-.209-.066-.297.066s-.341.429-.418.517-.154.099-.286.033c-.132-.066-.557-.205-1.061-.654-.392-.349-.657-.78-.734-.912s-.008-.204.058-.27c.06-.059.132-.154.198-.231s.088-.132.132-.22c.044-.088.022-.165-.011-.231-.033-.066-.297-.715-.407-.98-.107-.258-.216-.223-.297-.227l-.253-.005c-.088 0-.231.033-.352.165s-.462.451-.462 1.1-.473 1.287.528 1.342c.055.008 1.837 2.806 4.451 3.934.622.269 1.108.429 1.488.55.626.199 1.196.171 1.646.104.502-.075 1.54-.629 1.76-1.236.22-.607.22-1.127.154-1.236z" />
+                    </svg>
+                    WhatsApp: (82) 99394-1787
+                </a>
+            </div>
         </section>
 
     </main>
@@ -712,7 +989,7 @@
         </div>
     </div>
 
-    <!-- Modal Lightbox -->
+    <!-- Modal Lightbox (Imagens) -->
     <div id="imageModal" class="image-modal" onclick="closeModal(event)">
         <div class="modal-content-wrapper">
             <button class="modal-close" onclick="forceCloseModal()">&times;</button>
@@ -721,10 +998,84 @@
         </div>
     </div>
 
+    <!-- Modal de Sabores de Palhas -->
+    <div id="flavorsModal" class="image-modal" onclick="closeFlavorsModal(event)">
+        <div class="flavors-modal-card" onclick="event.stopPropagation()">
+            <div class="flavors-modal-header">
+                <button class="flavors-modal-close" onclick="forceCloseFlavorsModal()"
+                    aria-label="Fechar">&times;</button>
+                <h3>Sabores de Palhas Artesanais</h3>
+                <p>Escolha seus sabores favoritos para montar seus presentes de Natal</p>
+            </div>
+
+            <div class="flavors-modal-body">
+                <!-- Categoria 1: Clássicas -->
+                <div class="flavor-category">
+                    <div class="flavor-category-header">
+                        <h4>Palhas Clássicas (Tradicionais)</h4>
+                        <span class="flavor-count-badge">15 Sabores</span>
+                    </div>
+                    <p class="flavor-category-desc">Textura clássica macia com pedacinhos crocantes de biscoito.</p>
+                    <div class="flavor-tags">
+                        <span class="flavor-tag">Ameixa</span>
+                        <span class="flavor-tag">Amendoim</span>
+                        <span class="flavor-tag">Banoffee</span>
+                        <span class="flavor-tag">Beijinho</span>
+                        <span class="flavor-tag">Café</span>
+                        <span class="flavor-tag">Chocolate</span>
+                        <span class="flavor-tag">Delícia de Abacaxi</span>
+                        <span class="flavor-tag">Doce de Leite</span>
+                        <span class="flavor-tag">Morango</span>
+                        <span class="flavor-tag">Mousse de Limão</span>
+                        <span class="flavor-tag">Mousse de Maracujá</span>
+                        <span class="flavor-tag">Ninho</span>
+                        <span class="flavor-tag">Oreo</span>
+                        <span class="flavor-tag">Romeu e Julieta</span>
+                        <span class="flavor-tag highlight">Nutella</span>
+                    </div>
+                </div>
+
+                <!-- Categoria 2: Cremosas -->
+                <div class="flavor-category">
+                    <div class="flavor-category-header">
+                        <h4>Palhas Cremosas (No Pote / De Colher)</h4>
+                        <span class="flavor-count-badge">13 Sabores</span>
+                    </div>
+                    <p class="flavor-category-desc">Ponto aveludado para comer de colher (todos os sabores clássicos,
+                        exceto Café e Amendoim).</p>
+                    <div class="flavor-tags">
+                        <span class="flavor-tag">Ameixa</span>
+                        <span class="flavor-tag">Banoffee</span>
+                        <span class="flavor-tag">Beijinho</span>
+                        <span class="flavor-tag">Chocolate</span>
+                        <span class="flavor-tag">Delícia de Abacaxi</span>
+                        <span class="flavor-tag">Doce de Leite</span>
+                        <span class="flavor-tag">Morango</span>
+                        <span class="flavor-tag">Mousse de Limão</span>
+                        <span class="flavor-tag">Mousse de Maracujá</span>
+                        <span class="flavor-tag">Ninho</span>
+                        <span class="flavor-tag">Oreo</span>
+                        <span class="flavor-tag">Romeu e Julieta</span>
+                        <span class="flavor-tag highlight">Nutella</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flavors-modal-footer">
+                <p>Indique seus sabores preferidos ao fazer seu pedido!</p>
+                <button type="button" class="btn-open-flavors" style="padding: 8px 18px; font-size: 0.85rem;"
+                    onclick="forceCloseFlavorsModal()">
+                    Fechar
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImg');
         const modalCaption = document.getElementById('modalCaption');
+        const flavorsModal = document.getElementById('flavorsModal');
 
         function openModal(container) {
             const img = container.querySelector('.product-img');
@@ -745,11 +1096,28 @@
             document.body.style.overflow = 'auto';
         }
 
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && modal.classList.contains('active')) {
-                forceCloseModal();
+        function openFlavorsModal() {
+            flavorsModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeFlavorsModal(event) {
+            if (event.target === flavorsModal) {
+                forceCloseFlavorsModal();
             }
-        });
+        }
+
+        function forceCloseFlavorsModal() {
+            flavorsModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    if (modal && modal.classList.contains('active')) forceCloseModal();
+                    if (flavorsModal && flavorsModal.classList.contains('active')) forceCloseFlavorsModal();
+                }
+            });
     </script>
 
 </body>
