@@ -947,6 +947,41 @@
                 </div>
             </article>
 
+            <!-- Item 6: Caixinha 4 bombons -->
+            <article class="product-card">
+                <div class="img-container" onclick="openModal(this)">
+                    <img src="https://raw.githubusercontent.com/palhinhasdalara/catalogo-natal/main/caixinha-4-bombons.jpeg"
+                        alt="Caixinha com 4 Bombons" class="product-img">
+                    <div class="zoom-hint">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div>
+                        <div class="title-row">
+                            <h2 class="card-title">Caixinha com 4 Bombons</h2>
+                            <span class="card-price">R$ 32,00</span>
+                        </div>
+                        <p class="card-desc" style="margin-top: 10px;">
+                            Caixinha com 4 bombons artísticos. Todo o sabor do chocolate nessa lembrança especial de
+                            Natal.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5582993941787?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20a%20Caixinha%20com%204%20Bombons%20(R$%2032,00)."
+                        target="_blank" class="btn-wa-item">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.883 2.802.883h.001c3.18 0 5.766-2.586 5.767-5.766.001-3.18-2.585-5.77-5.77-5.77zm0 10.453c-.768 0-1.522-.206-2.18-.598l-.156-.092-1.619.425.432-1.579-.102-.162c-.432-.688-.66-1.488-.66-2.31 0-2.378 1.935-4.313 4.316-4.313 2.379 0 4.315 1.935 4.315 4.313-.001 2.378-1.936 4.316-4.316 4.316zm7.969-4.687c-.033-.055-.121-.088-.253-.154-.132-.066-.781-.385-.902-.429-.121-.044-.209-.066-.297.066s-.341.429-.418.517-.154.099-.286.033c-.132-.066-.557-.205-1.061-.654-.392-.349-.657-.78-.734-.912s-.008-.204.058-.27c.06-.059.132-.154.198-.231s.088-.132.132-.22c.044-.088.022-.165-.011-.231-.033-.066-.297-.715-.407-.98-.107-.258-.216-.223-.297-.227l-.253-.005c-.088 0-.231.033-.352.165s-.462.451-.462 1.1-.473 1.287.528 1.342c.055.008 1.837 2.806 4.451 3.934.622.269 1.108.429 1.488.55.626.199 1.196.171 1.646.104.502-.075 1.54-.629 1.76-1.236.22-.607.22-1.127.154-1.236z" />
+                        </svg>
+                        Pedir pelo WhatsApp
+                    </a>
+                </div>
+            </article>
+
         </div>
 
         <section class="order-notes">
@@ -1113,11 +1148,11 @@
         }
 
         document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') {
-                    if (modal && modal.classList.contains('active')) forceCloseModal();
-                    if (flavorsModal && flavorsModal.classList.contains('active')) forceCloseFlavorsModal();
-                }
-            });
+            if (e.key === 'Escape') {
+                if (modal && modal.classList.contains('active')) forceCloseModal();
+                if (flavorsModal && flavorsModal.classList.contains('active')) forceCloseFlavorsModal();
+            }
+        });
     </script>
 
 </body>
