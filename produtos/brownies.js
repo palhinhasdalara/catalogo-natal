@@ -7,28 +7,32 @@ window.PRODUTOS_CATALOGO = window.PRODUTOS_CATALOGO || [];
 
 window.PRODUTOS_CATALOGO.push(
     {
-        id: "brownie-cinta-individual",
+        id: "brownie-embalagem-comercial",
         categoria: "brownie",
         badge: "Brownie",
-        titulo: "Brownie na Cinta",
-        preco: "R$ 10,00",
-        foto: "imagens/brownies/brownie-na-cinta.jpeg",
-        descricao: "Brownie artesanal com casquinha crocante e interior macio em caixinha branca individual. A cinta é personalizada com o tema, nomes ou a marca do seu evento.",
+        titulo: "Brownie - Embalagem Comercial",
+        preco: "R$ 5,60",
+        foto: "imagens/brownies/brownies.jpeg",
+        descricao: "Brownie artesanal de chocolate com casquinha crocante e interior macio. Pedidos a partir de 10 unidades.",
         temSabores: false,
         textoSabores: "",
-        mensagemWhatsapp: "Olá! Gostaria de um orçamento para Lembrancinhas de Brownie na Cinta Personalizada."
+        mensagemWhatsapp: "Olá! Gostaria de um orçamento para brownies na embalagem comercial."
     },
     {
-        id: "brownie-caixa-3",
+        id: "brownie-fita",
         categoria: "brownie",
         badge: "Brownie",
-        titulo: "Caixa com 3 Brownies",
-        preco: "R$ 26,00",
-        foto: "imagens/brownies/caixa-3-brownies.jpeg",
-        descricao: "Caixa presenteável fechada com fita de cetim requintada. Recheada com 3 unidades fartas dos nossos brownies de chocolate puro.",
+        titulo: "Brownie com Fita de Cetim",
+        preco: "R$ 6,30",
+        foto: "imagens/brownies/brownie-decorado-1.jpeg",
+        fotos: [
+            "imagens/brownies/brownie-decorado-1.jpeg",
+            "imagens/brownies/brownie-decorado-2.jpeg"
+        ],
+        descricao: "Brownie com fita de cetim. Pedidos a partir de 10 unidades.",
         temSabores: false,
         textoSabores: "",
-        mensagemWhatsapp: "Olá! Gostaria de um orçamento para a Caixa com 3 Brownies Artesanais."
+        mensagemWhatsapp: "Olá! Gostaria de um orçamento para brownies artesanais na fita de cetim."
     }
 );
 

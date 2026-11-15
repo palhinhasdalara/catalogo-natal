@@ -1527,6 +1527,10 @@
                     </button>
                 ` : '';
 
+                const priceHtml = (item.preco && item.preco.trim() !== '' && item.preco.trim().toLowerCase() !== 'consulte')
+                    ? `<span class="card-price">${escapeHtml(item.preco)}</span>`
+                    : '';
+
                 return `
                     <article class="product-card" data-category="${escapeHtml(item.categoria)}" data-id="${escapeHtml(item.id)}">
                         <div class="img-container" onclick="openModal('${escapeHtml(item.id)}')">
@@ -1547,7 +1551,7 @@
                             <div>
                                 <div class="title-row">
                                     <h2 class="card-title">${escapeHtml(item.titulo)}</h2>
-                                    <span class="card-price">${escapeHtml(item.preco || 'Consulte')}</span>
+                                    ${priceHtml}
                                 </div>
                                 <p class="card-desc" style="margin-top: 10px;">
                                     ${escapeHtml(item.descricao || '')}
