@@ -66,6 +66,35 @@ window.PRODUTOS_CATALOGO.push(
         temSabores: true,
         textoSabores: "✨ Disponível em 15 sabores clássicos",
         mensagemWhatsapp: "Olá! Gostaria de um orçamento para palha italiana embalada no papel crepom mais fita de cetim mais tercinho."
+    },
+    {
+        id: "palha-papel-cinta-personalizada",
+        categoria: "palha-classica",
+        badge: "Palha Clássica",
+        titulo: "Palha italiana com cinta personalizada",
+        preco: "R$ 7,00",
+        foto: "imagens/palhas-classicas/palha-decorada-8.jpeg",
+        fotos: [
+            "imagens/palhas-classicas/palha-decorada-8.jpeg",
+            "imagens/palhas-classicas/palha-decorada-9.jpeg",
+            "imagens/palhas-classicas/palha-decorada-10.jpeg"
+        ],
+        descricao: "Palha italiana com cinta personalizada. Pedidos a partir de 20 unidades.",
+        temSabores: true,
+        textoSabores: "✨ Disponível em 15 sabores clássicos",
+        mensagemWhatsapp: "Olá! Gostaria de um orçamento para palha italiana com cinta personalizada."
+    },
+    {
+        id: "palha-rústica",
+        categoria: "palha-classica",
+        badge: "Palha Clássica",
+        titulo: "Palha italiana rústica.",
+        preco: "R$ 10,00",
+        foto: "imagens/palhas-classicas/palha-decorada-11.jpeg",
+        descricao: "Palha italiana embalada no papel crepom mais fita de juta mais fita de cetim. Pedidos a partir de 10 unidades.",
+        temSabores: true,
+        textoSabores: "✨ Disponível em 15 sabores clássicos",
+        mensagemWhatsapp: "Olá! Gostaria de um orçamento para palha italiana rústica."
     }
 );
 
