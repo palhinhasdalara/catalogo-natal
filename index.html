@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo Especial de Natal | Palhinhas da Lara</title>
-    <!-- Fontes: Sofia (marca), Lora (títulos acolhedores, redondos e legíveis) e Plus Jakarta Sans (leitura limpa e moderna) -->
+    <title>Palhinhas da Lara | Lembranças Artesanais para Eventos</title>
+    <!-- Fontes: Sofia (marca), Lora (títulos acolhedores) e Plus Jakarta Sans (leitura limpa e moderna) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -51,22 +51,50 @@
         }
 
         .wrapper {
-            max-width: 1080px;
+            max-width: 1120px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
+        /* Barra de Temporada (Natal) */
+        .seasonal-bar {
+            background: linear-gradient(90deg, #741523 0%, #4a131c 100%);
+            color: #ffffff;
+            padding: 10px 16px;
+            text-align: center;
+            font-size: 0.88rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid var(--gold);
+        }
+
+        .seasonal-bar a {
+            color: #ffeed3;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.2s;
+        }
+
+        .seasonal-bar a:hover {
+            color: #ffffff;
+        }
+
+        /* Cabeçalho */
         header {
             text-align: center;
-            padding: 48px 20px 34px;
+            padding: 44px 20px 32px;
             background: linear-gradient(180deg, #f7efe6 0%, var(--bg-page) 100%);
             border-bottom: 1px solid var(--border-card);
-            margin-bottom: 36px;
+            margin-bottom: 30px;
         }
 
         .brand-name {
             font-family: 'Sofia', cursive;
-            font-size: clamp(2.4rem, 5vw, 3.5rem);
+            font-size: clamp(2.4rem, 5vw, 3.6rem);
             color: var(--wine);
             line-height: 1.15;
             margin-bottom: 4px;
@@ -100,14 +128,155 @@
             font-style: italic;
             font-size: clamp(1.1rem, 2vw, 1.3rem);
             color: var(--text-main);
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         header p.sub {
-            font-size: 0.85rem;
+            font-size: 0.92rem;
             color: var(--text-muted);
-            font-weight: 400;
-            letter-spacing: 0.2px;
+            max-width: 680px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Banner de Sabores e Catálogo WhatsApp */
+        .top-action-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
+        .btn-open-flavors {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            background: #ffffff;
+            color: var(--wine);
+            border: 1.5px solid var(--gold);
+            padding: 11px 22px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(116, 21, 35, 0.08);
+            transition: all 0.2s ease;
+        }
+
+        .btn-open-flavors:hover {
+            background: var(--wine);
+            color: #ffffff;
+            border-color: var(--wine);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(116, 21, 35, 0.16);
+        }
+
+        .btn-open-flavors svg {
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+        }
+
+        .btn-wa-catalog-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #faf4ea;
+            color: var(--wine);
+            border: 1.5px solid #ebd9c5;
+            padding: 11px 22px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-wa-catalog-pill:hover {
+            background: #f4e7d4;
+            transform: translateY(-2px);
+        }
+
+        /* Menu de Abas Interativas (Abordagem B: Por Doce) */
+        .filter-section {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+
+        .filter-title {
+            font-family: 'Lora', serif;
+            font-size: 1.15rem;
+            color: var(--wine);
+            margin-bottom: 14px;
+            font-weight: 600;
+        }
+
+        .tabs-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: #ffffff;
+            border: 1.5px solid var(--border-card);
+            color: var(--text-muted);
+            padding: 10px 18px;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tab-btn:hover {
+            border-color: var(--gold);
+            color: var(--wine);
+        }
+
+        .tab-btn.active {
+            background: var(--wine);
+            border-color: var(--wine);
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(116, 21, 35, 0.2);
+        }
+
+        /* Aviso contextual da categoria ativa */
+        .category-intro {
+            background: #ffffff;
+            border: 1px solid var(--border-card);
+            border-left: 4px solid var(--gold);
+            border-radius: 12px;
+            padding: 14px 20px;
+            margin-bottom: 28px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .category-intro strong {
+            color: var(--wine);
+        }
+
+        .category-intro a {
+            color: var(--wine);
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            cursor: pointer;
         }
 
         /* Grade de Produtos */
@@ -133,17 +302,16 @@
             box-shadow: 0 12px 30px rgba(60, 20, 25, 0.1);
         }
 
-        /* Imagem sem corte e clicável */
         .img-container {
             width: 100%;
-            height: 300px;
+            height: 290px;
             background-color: #faf6f0;
             position: relative;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 8px;
+            padding: 12px;
             border-bottom: 1px solid var(--border-card);
         }
 
@@ -157,6 +325,21 @@
 
         .img-container:hover .product-img {
             transform: scale(1.02);
+        }
+
+        .badge-sweet-type {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(116, 21, 35, 0.92);
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            backdrop-filter: blur(4px);
         }
 
         .zoom-hint {
@@ -199,10 +382,9 @@
             gap: 12px;
         }
 
-        /* Título com a fonte Lora: quente, elegante e ultra legível */
         .card-title {
             font-family: 'Lora', serif;
-            font-size: 1.35rem;
+            font-size: 1.3rem;
             font-weight: 600;
             color: var(--wine);
             line-height: 1.3;
@@ -210,7 +392,7 @@
 
         .card-price {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 1.3rem;
+            font-size: 1.15rem;
             font-weight: 700;
             color: var(--gold);
             white-space: nowrap;
@@ -223,12 +405,41 @@
             font-weight: 400;
         }
 
+        .card-flavor-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: none;
+            border: none;
+            color: var(--wine);
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 4px 0;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            font-family: inherit;
+            transition: color 0.15s ease;
+            width: fit-content;
+        }
+
+        .card-flavor-link:hover {
+            color: var(--gold);
+        }
+
+        .card-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: auto;
+        }
+
         .btn-wa-item {
             background-color: var(--whatsapp);
             color: #ffffff;
             font-weight: 600;
             font-size: 0.88rem;
-            padding: 13px 18px;
+            padding: 12px 18px;
             border-radius: 10px;
             text-decoration: none;
             display: flex;
@@ -238,7 +449,6 @@
             letter-spacing: 0.2px;
             transition: background 0.2s ease;
             box-shadow: 0 4px 14px rgba(37, 211, 102, 0.2);
-            margin-top: auto;
         }
 
         .btn-wa-item:hover,
@@ -253,50 +463,178 @@
             flex-shrink: 0;
         }
 
-        .order-notes {
-            margin-top: 48px;
-            padding: 26px 20px;
+        /* Seção "Como Funciona o Pedido" */
+        .how-it-works {
+            margin-top: 52px;
             background: #ffffff;
             border: 1px solid var(--border-card);
+            border-radius: 20px;
+            padding: 36px 28px;
+            text-align: center;
+        }
+
+        .how-it-works h3 {
+            font-family: 'Lora', serif;
+            font-size: 1.6rem;
+            color: var(--wine);
+            margin-bottom: 8px;
+        }
+
+        .how-it-works p.subtitle {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            max-width: 620px;
+            margin: 0 auto 30px;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+            text-align: left;
+        }
+
+        .step-item {
+            background: #faf7f2;
+            border: 1px solid var(--border-card);
             border-radius: 14px;
+            padding: 22px 20px;
+            position: relative;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: var(--wine);
+            color: #ffffff;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+
+        .step-item h4 {
+            font-family: 'Lora', serif;
+            font-size: 1.15rem;
+            color: var(--wine);
+            margin-bottom: 6px;
+        }
+
+        .step-item p {
+            font-size: 0.84rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Seção de Ocasiões */
+        .occasions-section {
+            margin-top: 36px;
+            padding: 32px 24px;
+            background: linear-gradient(180deg, #fbf7f0 0%, #ffffff 100%);
+            border: 1px solid var(--border-card);
+            border-radius: 18px;
+            text-align: center;
+        }
+
+        .occasions-section h3 {
+            font-family: 'Lora', serif;
+            font-size: 1.5rem;
+            color: var(--wine);
+            margin-bottom: 8px;
+        }
+
+        .occasions-section p.lead {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            max-width: 680px;
+            margin: 0 auto 24px;
+        }
+
+        .occasions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .occasion-item {
+            background: #ffffff;
+            padding: 18px;
+            border-radius: 12px;
+            border: 1px solid var(--border-card);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        .occasion-item h4 {
+            font-family: 'Lora', serif;
+            color: var(--wine);
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .occasion-item p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Notas de Encomenda */
+        .order-notes {
+            margin-top: 36px;
+            padding: 28px 20px;
+            background: #ffffff;
+            border: 1px solid var(--border-card);
+            border-radius: 16px;
             text-align: center;
         }
 
         .order-notes h4 {
             font-family: 'Lora', serif;
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             font-weight: 600;
             color: var(--wine);
             margin-bottom: 8px;
         }
 
         .order-notes p {
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             color: var(--text-muted);
             line-height: 1.6;
         }
 
-        .order-notes .wa-display-link {
+        .wa-display-link {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            margin-top: 14px;
             color: var(--wine);
             font-weight: 700;
             font-size: 0.95rem;
             text-decoration: none;
-            padding: 8px 16px;
+            padding: 9px 18px;
             border-radius: 8px;
             background: #faf4ea;
             border: 1px solid #ebd9c5;
+            transition: all 0.2s ease;
         }
 
-        .order-notes .wa-display-link svg {
+        .wa-display-link:hover {
+            background: #f4e6d3;
+        }
+
+        .wa-display-link svg {
             width: 18px;
             height: 18px;
             fill: var(--whatsapp-dark);
         }
 
+        /* Barra Inferior Fixa */
         .bottom-bar {
             position: fixed;
             bottom: 0;
@@ -304,13 +642,13 @@
             right: 0;
             background: #ffffff;
             border-top: 1px solid var(--border-card);
-            padding: 14px 24px;
+            padding: 12px 24px;
             box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.06);
             z-index: 1000;
         }
 
         .bottom-inner {
-            max-width: 1080px;
+            max-width: 1120px;
             margin: 0 auto;
             display: flex;
             align-items: center;
@@ -332,12 +670,18 @@
             font-family: 'Lora', serif;
         }
 
+        .bottom-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
         .btn-direct-chat {
             background-color: var(--whatsapp);
             color: #ffffff;
             font-weight: 600;
             font-size: 0.88rem;
-            padding: 11px 22px;
+            padding: 10px 20px;
             border-radius: 50px;
             text-decoration: none;
             display: inline-flex;
@@ -352,7 +696,7 @@
             fill: currentColor;
         }
 
-        /* Modal Lightbox */
+        /* Modais */
         .image-modal {
             display: none;
             position: fixed;
@@ -415,63 +759,154 @@
             line-height: 1;
         }
 
-        /* Banner / Botão de Sabores */
-        .flavors-banner-wrap {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .btn-open-flavors {
+        
+        /* Badge e Miniaturas de Galeria nos Cards */
+        .gallery-count-badge {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: rgba(25, 18, 19, 0.82);
+            backdrop-filter: blur(4px);
+            color: #ffffff;
+            font-size: 0.74rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
             display: inline-flex;
             align-items: center;
-            gap: 9px;
-            background: #ffffff;
-            color: var(--wine);
-            border: 1.5px solid var(--gold);
-            padding: 11px 22px;
-            border-radius: 50px;
-            font-size: 0.92rem;
-            font-weight: 600;
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            gap: 5px;
+            z-index: 4;
+            pointer-events: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.18);
+        }
+
+        .card-gallery-thumbs {
+            display: flex;
+            gap: 8px;
+            padding: 10px 14px 4px 14px;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+        .card-gallery-thumbs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .card-thumb-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid transparent;
             cursor: pointer;
-            box-shadow: 0 4px 14px rgba(116, 21, 35, 0.08);
+            padding: 0;
+            background: none;
+            flex-shrink: 0;
+            transition: all 0.2s ease;
+            opacity: 0.65;
+        }
+
+        .card-thumb-btn:hover {
+            opacity: 1;
+            transform: scale(1.06);
+        }
+
+        .card-thumb-btn.active {
+            border-color: var(--wine);
+            opacity: 1;
+            box-shadow: 0 2px 8px rgba(116, 21, 35, 0.35);
+        }
+
+        .card-thumb-btn img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Controles do Modal de Imagens (Lightbox com Carrossel) */
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: #ffffff;
+            font-size: 26px;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            z-index: 10;
+            user-select: none;
+        }
+
+        .modal-nav:hover {
+            background: rgba(255, 255, 255, 0.55);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .modal-nav.prev {
+            left: -60px;
+        }
+
+        .modal-nav.next {
+            right: -60px;
+        }
+
+        @media (max-width: 768px) {
+            .modal-nav.prev { left: 10px; }
+            .modal-nav.next { right: 10px; }
+            .modal-nav { 
+                width: 40px; 
+                height: 40px; 
+                font-size: 22px; 
+                background: rgba(25, 18, 19, 0.65); 
+                border-color: rgba(255,255,255,0.25);
+            }
+        }
+
+        .modal-counter {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.85rem;
+            margin-top: 6px;
+            font-weight: 500;
+        }
+
+        .modal-thumbs-row {
+            display: flex;
+            gap: 8px;
+            margin-top: 14px;
+            max-width: 90vw;
+            overflow-x: auto;
+            padding: 4px;
+        }
+
+        .modal-thumb-item {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 2px solid transparent;
+            opacity: 0.6;
+            cursor: pointer;
             transition: all 0.2s ease;
         }
 
-        .btn-open-flavors:hover {
-            background: var(--wine);
-            color: #ffffff;
-            border-color: var(--wine);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(116, 21, 35, 0.16);
+        .modal-thumb-item:hover {
+            opacity: 1;
         }
 
-        .btn-open-flavors svg {
-            width: 18px;
-            height: 18px;
-            stroke: currentColor;
-        }
-
-        .card-flavor-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: none;
-            border: none;
-            color: var(--wine);
-            font-size: 0.82rem;
-            font-weight: 600;
-            cursor: pointer;
-            padding: 4px 0;
-            text-decoration: underline;
-            text-underline-offset: 3px;
-            font-family: inherit;
-            transition: color 0.15s ease;
-            width: fit-content;
-        }
-
-        .card-flavor-link:hover {
-            color: var(--gold);
+        .modal-thumb-item.active {
+            border-color: #ffffff;
+            opacity: 1;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
         }
 
         /* Modal de Sabores */
@@ -639,22 +1074,24 @@
             color: var(--text-muted);
         }
 
-        /* Responsividade para Celulares e Ajuste em Iframes */
-        @media (max-width: 600px) {
+        /* Responsividade para Celulares */
+        @media (max-width: 640px) {
             .wrapper {
                 padding: 0 16px;
             }
 
             header {
                 padding: 32px 16px 22px;
-                margin-bottom: 24px;
+                margin-bottom: 20px;
             }
 
-            .flavors-banner-wrap {
-                margin-bottom: 22px;
+            .tab-btn {
+                padding: 8px 14px;
+                font-size: 0.82rem;
             }
 
-            .btn-open-flavors {
+            .btn-open-flavors,
+            .btn-wa-catalog-pill {
                 width: 100%;
                 justify-content: center;
                 font-size: 0.86rem;
@@ -694,9 +1131,10 @@
                 font-size: 1.15rem;
             }
 
+            .how-it-works,
+            .occasions-section,
             .order-notes {
-                margin-top: 36px;
-                padding: 20px 16px;
+                padding: 24px 16px;
             }
 
             .order-notes .wa-display-link {
@@ -710,7 +1148,7 @@
             }
 
             .bottom-inner {
-                gap: 10px;
+                gap: 8px;
             }
 
             .bottom-info strong {
@@ -722,7 +1160,7 @@
             }
 
             .btn-direct-chat {
-                padding: 9px 16px;
+                padding: 9px 14px;
                 font-size: 0.82rem;
             }
 
@@ -736,303 +1174,153 @@
 
 <body>
 
+    <!-- Barra de Temporada (Natal) -->
+    <nav class="seasonal-bar">
+        <span>🎄 Procurando presentes natalinos?</span>
+        <a href="natal-2026/index.html">Acesse nosso Catálogo Especial de Natal 2026 &rarr;</a>
+    </nav>
+
     <header>
         <div class="brand-name">Palhinhas da Lara</div>
-        <span class="header-seal">Coleção de Natal</span>
-        <h1>Lembranças que falam de gratidão</h1>
+        <span class="header-seal">Lembranças Artesanais para Eventos</span>
+        <h1>Doces memórias para celebrar seus momentos especiais</h1>
         <p class="motto">“Toda história pede uma lembrança”</p>
-        <p class="sub">Doçuras artesanais preparadas com carinho para presentear</p>
+        <p class="sub">
+            Doçuras finas preparadas artesanalmente com ingredientes de excelência para Casamentos, Maternidade,
+            Batizados, 15 Anos e Eventos Corporativos.
+        </p>
     </header>
 
     <main class="wrapper">
 
-        <!-- Banner de Sabores -->
-        <div class="flavors-banner-wrap">
+        <!-- Ações do Topo: Sabores & Catálogo WhatsApp -->
+        <div class="top-action-bar">
             <button type="button" class="btn-open-flavors" onclick="openFlavorsModal()">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="12" r="10" />
                     <line x1="12" y1="8" x2="12" y2="12" />
                     <line x1="12" y1="16" x2="12.01" y2="16" />
                 </svg>
-                <span>Conheça os <strong>Sabores de Palha Italiana</strong> (Clássicas &amp; Cremosas)</span>
+                <span>Conheça os <strong>Sabores de Palha Italiana</strong> (15 Clássicos &amp; 13 Cremosos)</span>
             </button>
+            <a href="https://wa.me/c/558293941787" target="_blank" rel="noopener noreferrer"
+                class="btn-wa-catalog-pill">
+                📱 Ver Catálogo no WhatsApp &rarr;
+            </a>
         </div>
 
-        <div class="catalog-list">
-
-            <!-- Item 1: Brownie na Cinta -->
-            <article class="product-card">
-                <div class="img-container" onclick="openModal(this)">
-                    <img src="https://raw.githubusercontent.com/palhinhasdalara/catalogo-natal/main/brownies-na-cinta.jpeg"
-                        alt="Brownie Boas Festas" class="product-img">
-                    <div class="zoom-hint">
-                        <svg viewBox="0 0 24 24">
-                            <circle cx="11" cy="11" r="8" />
-                            <path d="m21 21-4.35-4.35" />
-                            <path d="M11 8v6M8 11h6" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div>
-                        <div class="title-row">
-                            <h2 class="card-title">Brownie Boas Festas</h2>
-                            <span class="card-price">R$ 10,00</span>
-                        </div>
-                        <p class="card-desc" style="margin-top: 10px;">
-                            Brownie artesanal generoso, chocolatudo e macio. Apresentado em caixinha individual branca
-                            com cinta temática clássica de Boas Festas.
-                        </p>
-                    </div>
-                    <a href="https://wa.me/5582993941787?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20o%20Brownie%20na%20Caixinha%20Boas%20Festas%20(R$%2010,00)."
-                        target="_blank" class="btn-wa-item">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.883 2.802.883h.001c3.18 0 5.766-2.586 5.767-5.766.001-3.18-2.585-5.77-5.77-5.77zm0 10.453c-.768 0-1.522-.206-2.18-.598l-.156-.092-1.619.425.432-1.579-.102-.162c-.432-.688-.66-1.488-.66-2.31 0-2.378 1.935-4.313 4.316-4.313 2.379 0 4.315 1.935 4.315 4.313-.001 2.378-1.936 4.316-4.316 4.316zm7.969-4.687c-.033-.055-.121-.088-.253-.154-.132-.066-.781-.385-.902-.429-.121-.044-.209-.066-.297.066s-.341.429-.418.517-.154.099-.286.033c-.132-.066-.557-.205-1.061-.654-.392-.349-.657-.78-.734-.912s-.008-.204.058-.27c.06-.059.132-.154.198-.231s.088-.132.132-.22c.044-.088.022-.165-.011-.231-.033-.066-.297-.715-.407-.98-.107-.258-.216-.223-.297-.227l-.253-.005c-.088 0-.231.033-.352.165s-.462.451-.462 1.1-.473 1.287.528 1.342c.055.008 1.837 2.806 4.451 3.934.622.269 1.108.429 1.488.55.626.199 1.196.171 1.646.104.502-.075 1.54-.629 1.76-1.236.22-.607.22-1.127.154-1.236z" />
-                        </svg>
-                        Pedir pelo WhatsApp
-                    </a>
-                </div>
-            </article>
-
-            <!-- Item 2: Caixinha Laço Dourado -->
-            <article class="product-card">
-                <div class="img-container" onclick="openModal(this)">
-                    <img src="https://raw.githubusercontent.com/palhinhasdalara/catalogo-natal/main/caixinha-feliz-natal-3-brownies.jpeg"
-                        alt="Caixinha com Laço de Cetim" class="product-img">
-                    <div class="zoom-hint">
-                        <svg viewBox="0 0 24 24">
-                            <circle cx="11" cy="11" r="8" />
-                            <path d="m21 21-4.35-4.35" />
-                            <path d="M11 8v6M8 11h6" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div>
-                        <div class="title-row">
-                            <h2 class="card-title">Caixinha com Laço de Cetim</h2>
-                            <span class="card-price">R$ 26,00</span>
-                        </div>
-                        <p class="card-desc" style="margin-top: 10px;">
-                            Caixinha vermelha com padronagem geométrica e laço em cetim dourado. Recheada com
-                            <strong>3 Brownies</strong> ou <strong>3 Palhas Italianas</strong> artesanais.
-                        </p>
-                        <button type="button" class="card-flavor-link" onclick="openFlavorsModal()">
-                            ✨ Ver sabores disponíveis de palha
-                        </button>
-                    </div>
-                    <a href="https://wa.me/5582993941787?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20a%20Caixinha%20com%20La%C3%A7o%20Dourado%20(R$%2026,00)."
-                        target="_blank" class="btn-wa-item">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.883 2.802.883h.001c3.18 0 5.766-2.586 5.767-5.766.001-3.18-2.585-5.77-5.77-5.77zm0 10.453c-.768 0-1.522-.206-2.18-.598l-.156-.092-1.619.425.432-1.579-.102-.162c-.432-.688-.66-1.488-.66-2.31 0-2.378 1.935-4.313 4.316-4.313 2.379 0 4.315 1.935 4.315 4.313-.001 2.378-1.936 4.316-4.316 4.316zm7.969-4.687c-.033-.055-.121-.088-.253-.154-.132-.066-.781-.385-.902-.429-.121-.044-.209-.066-.297.066s-.341.429-.418.517-.154.099-.286.033c-.132-.066-.557-.205-1.061-.654-.392-.349-.657-.78-.734-.912s-.008-.204.058-.27c.06-.059.132-.154.198-.231s.088-.132.132-.22c.044-.088.022-.165-.011-.231-.033-.066-.297-.715-.407-.98-.107-.258-.216-.223-.297-.227l-.253-.005c-.088 0-.231.033-.352.165s-.462.451-.462 1.1-.473 1.287.528 1.342c.055.008 1.837 2.806 4.451 3.934.622.269 1.108.429 1.488.55.626.199 1.196.171 1.646.104.502-.075 1.54-.629 1.76-1.236.22-.607.22-1.127.154-1.236z" />
-                        </svg>
-                        Pedir pelo WhatsApp
-                    </a>
-                </div>
-            </article>
-
-            <!-- Item 3: Caixa 4 Palhas -->
-            <article class="product-card">
-                <div class="img-container" onclick="openModal(this)">
-                    <img src="https://raw.githubusercontent.com/palhinhasdalara/catalogo-natal/main/caixinha-feliz-natal-4-palhas.jpeg"
-                        alt="Caixa 4 Palhas Italianas" class="product-img">
-                    <div class="zoom-hint">
-                        <svg viewBox="0 0 24 24">
-                            <circle cx="11" cy="11" r="8" />
-                            <path d="m21 21-4.35-4.35" />
-                            <path d="M11 8v6M8 11h6" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div>
-                        <div class="title-row">
-                            <h2 class="card-title">Caixa 4 Palhas Italianas</h2>
-                            <span class="card-price">R$ 30,00</span>
-                        </div>
-                        <p class="card-desc" style="margin-top: 10px;">
-                            Embalagem presenteável decorada com tampa em visor transparente. Acompanha 4 unidades
-                            generosas das nossas palhas artesanais de textura perfeita.
-                        </p>
-                        <button type="button" class="card-flavor-link" onclick="openFlavorsModal()">
-                            ✨ Ver opções de sabores clássicos
-                        </button>
-                    </div>
-                    <a href="https://wa.me/5582993941787?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20a%20Caixa%20com%204%20Palhas%20Italianas%20(R$%2030,00)."
-                        target="_blank" class="btn-wa-item">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.883 2.802.883h.001c3.18 0 5.766-2.586 5.767-5.766.001-3.18-2.585-5.77-5.77-5.77zm0 10.453c-.768 0-1.522-.206-2.18-.598l-.156-.092-1.619.425.432-1.579-.102-.162c-.432-.688-.66-1.488-.66-2.31 0-2.378 1.935-4.313 4.316-4.313 2.379 0 4.315 1.935 4.315 4.313-.001 2.378-1.936 4.316-4.316 4.316zm7.969-4.687c-.033-.055-.121-.088-.253-.154-.132-.066-.781-.385-.902-.429-.121-.044-.209-.066-.297.066s-.341.429-.418.517-.154.099-.286.033c-.132-.066-.557-.205-1.061-.654-.392-.349-.657-.78-.734-.912s-.008-.204.058-.27c.06-.059.132-.154.198-.231s.088-.132.132-.22c.044-.088.022-.165-.011-.231-.033-.066-.297-.715-.407-.98-.107-.258-.216-.223-.297-.227l-.253-.005c-.088 0-.231.033-.352.165s-.462.451-.462 1.1-.473 1.287.528 1.342c.055.008 1.837 2.806 4.451 3.934.622.269 1.108.429 1.488.55.626.199 1.196.171 1.646.104.502-.075 1.54-.629 1.76-1.236.22-.607.22-1.127.154-1.236z" />
-                        </svg>
-                        Pedir pelo WhatsApp
-                    </a>
-                </div>
-            </article>
-
-            <!-- Item 4: Caixa Trio Degustação -->
-            <article class="product-card">
-                <div class="img-container" onclick="openModal(this)">
-                    <img src="https://raw.githubusercontent.com/palhinhasdalara/catalogo-natal/main/caixinha-feliz-natal-3-itens.jpeg"
-                        alt="Trio Degustação Especial" class="product-img">
-                    <div class="zoom-hint">
-                        <svg viewBox="0 0 24 24">
-                            <circle cx="11" cy="11" r="8" />
-                            <path d="m21 21-4.35-4.35" />
-                            <path d="M11 8v6M8 11h6" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div>
-                        <div class="title-row">
-                            <h2 class="card-title">Trio Degustação Especial</h2>
-                            <span class="card-price">R$ 30,00</span>
-                        </div>
-                        <p class="card-desc" style="margin-top: 10px;">
-                            Caixa temática com tampa geométrica natalina e forração de palha natural. Composição da
-                            caixinha: 1
-                            pote de palha cremosa com colherzinha, 1 brownie artesanal e 1 palha tradicional.
-                        </p>
-                        <button type="button" class="card-flavor-link" onclick="openFlavorsModal()">
-                            ✨ Ver sabores clássicos e cremosos
-                        </button>
-                    </div>
-                    <a href="https://wa.me/5582993941787?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20a%20Caixa%20Trio%20Degusta%C3%A7%C3%A3o%20(R$%2030,00)."
-                        target="_blank" class="btn-wa-item">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.883 2.802.883h.001c3.18 0 5.766-2.586 5.767-5.766.001-3.18-2.585-5.77-5.77-5.77zm0 10.453c-.768 0-1.522-.206-2.18-.598l-.156-.092-1.619.425.432-1.579-.102-.162c-.432-.688-.66-1.488-.66-2.31 0-2.378 1.935-4.313 4.316-4.313 2.379 0 4.315 1.935 4.315 4.313-.001 2.378-1.936 4.316-4.316 4.316zm7.969-4.687c-.033-.055-.121-.088-.253-.154-.132-.066-.781-.385-.902-.429-.121-.044-.209-.066-.297.066s-.341.429-.418.517-.154.099-.286.033c-.132-.066-.557-.205-1.061-.654-.392-.349-.657-.78-.734-.912s-.008-.204.058-.27c.06-.059.132-.154.198-.231s.088-.132.132-.22c.044-.088.022-.165-.011-.231-.033-.066-.297-.715-.407-.98-.107-.258-.216-.223-.297-.227l-.253-.005c-.088 0-.231.033-.352.165s-.462.451-.462 1.1-.473 1.287.528 1.342c.055.008 1.837 2.806 4.451 3.934.622.269 1.108.429 1.488.55.626.199 1.196.171 1.646.104.502-.075 1.54-.629 1.76-1.236.22-.607.22-1.127.154-1.236z" />
-                        </svg>
-                        Pedir pelo WhatsApp
-                    </a>
-                </div>
-            </article>
-
-            <!-- Item 5: Potinho de Palha -->
-            <article class="product-card">
-                <div class="img-container" onclick="openModal(this)">
-                    <img src="https://raw.githubusercontent.com/palhinhasdalara/catalogo-natal/main/potinho-palha.jpeg"
-                        alt="Palha Cremosa no Pote" class="product-img">
-                    <div class="zoom-hint">
-                        <svg viewBox="0 0 24 24">
-                            <circle cx="11" cy="11" r="8" />
-                            <path d="m21 21-4.35-4.35" />
-                            <path d="M11 8v6M8 11h6" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div>
-                        <div class="title-row">
-                            <h2 class="card-title">Palha Cremosa no Pote</h2>
-                            <span class="card-price">R$ 32,00</span>
-                        </div>
-                        <p class="card-desc" style="margin-top: 10px;">
-                            Nossa palha cremosa no ponto perfeito para comer de colher (250 g). Pote de vidro
-                            reutilizável decorado com tampa metálica e rótulo delicado de Natal.
-                        </p>
-                        <button type="button" class="card-flavor-link" onclick="openFlavorsModal()">
-                            ✨ Ver os 13 sabores cremosos
-                        </button>
-                    </div>
-                    <a href="https://wa.me/5582993941787?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20o%20Pote%20de%20Palha%20Cremosa%20250g%20(R$%2032,00)."
-                        target="_blank" class="btn-wa-item">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.883 2.802.883h.001c3.18 0 5.766-2.586 5.767-5.766.001-3.18-2.585-5.77-5.77-5.77zm0 10.453c-.768 0-1.522-.206-2.18-.598l-.156-.092-1.619.425.432-1.579-.102-.162c-.432-.688-.66-1.488-.66-2.31 0-2.378 1.935-4.313 4.316-4.313 2.379 0 4.315 1.935 4.315 4.313-.001 2.378-1.936 4.316-4.316 4.316zm7.969-4.687c-.033-.055-.121-.088-.253-.154-.132-.066-.781-.385-.902-.429-.121-.044-.209-.066-.297.066s-.341.429-.418.517-.154.099-.286.033c-.132-.066-.557-.205-1.061-.654-.392-.349-.657-.78-.734-.912s-.008-.204.058-.27c.06-.059.132-.154.198-.231s.088-.132.132-.22c.044-.088.022-.165-.011-.231-.033-.066-.297-.715-.407-.98-.107-.258-.216-.223-.297-.227l-.253-.005c-.088 0-.231.033-.352.165s-.462.451-.462 1.1-.473 1.287.528 1.342c.055.008 1.837 2.806 4.451 3.934.622.269 1.108.429 1.488.55.626.199 1.196.171 1.646.104.502-.075 1.54-.629 1.76-1.236.22-.607.22-1.127.154-1.236z" />
-                        </svg>
-                        Pedir pelo WhatsApp
-                    </a>
-                </div>
-            </article>
-
-            <!-- Item 6: Caixinha 4 bombons -->
-            <article class="product-card">
-                <div class="img-container" onclick="openModal(this)">
-                    <img src="https://raw.githubusercontent.com/palhinhasdalara/catalogo-natal/main/caixinha-4-bombons.jpeg"
-                        alt="Caixinha com 4 Bombons" class="product-img">
-                    <div class="zoom-hint">
-                        <svg viewBox="0 0 24 24">
-                            <circle cx="11" cy="11" r="8" />
-                            <path d="m21 21-4.35-4.35" />
-                            <path d="M11 8v6M8 11h6" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div>
-                        <div class="title-row">
-                            <h2 class="card-title">Caixinha com 4 Bombons</h2>
-                            <span class="card-price">R$ 32,00</span>
-                        </div>
-                        <p class="card-desc" style="margin-top: 10px;">
-                            Caixinha com 4 bombons artísticos. Todo o sabor do chocolate nessa lembrança especial de
-                            Natal.
-                        </p>
-                    </div>
-                    <a href="https://wa.me/5582993941787?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20a%20Caixinha%20com%204%20Bombons%20(R$%2032,00)."
-                        target="_blank" class="btn-wa-item">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.883 2.802.883h.001c3.18 0 5.766-2.586 5.767-5.766.001-3.18-2.585-5.77-5.77-5.77zm0 10.453c-.768 0-1.522-.206-2.18-.598l-.156-.092-1.619.425.432-1.579-.102-.162c-.432-.688-.66-1.488-.66-2.31 0-2.378 1.935-4.313 4.316-4.313 2.379 0 4.315 1.935 4.315 4.313-.001 2.378-1.936 4.316-4.316 4.316zm7.969-4.687c-.033-.055-.121-.088-.253-.154-.132-.066-.781-.385-.902-.429-.121-.044-.209-.066-.297.066s-.341.429-.418.517-.154.099-.286.033c-.132-.066-.557-.205-1.061-.654-.392-.349-.657-.78-.734-.912s-.008-.204.058-.27c.06-.059.132-.154.198-.231s.088-.132.132-.22c.044-.088.022-.165-.011-.231-.033-.066-.297-.715-.407-.98-.107-.258-.216-.223-.297-.227l-.253-.005c-.088 0-.231.033-.352.165s-.462.451-.462 1.1-.473 1.287.528 1.342c.055.008 1.837 2.806 4.451 3.934.622.269 1.108.429 1.488.55.626.199 1.196.171 1.646.104.502-.075 1.54-.629 1.76-1.236.22-.607.22-1.127.154-1.236z" />
-                        </svg>
-                        Pedir pelo WhatsApp
-                    </a>
-                </div>
-            </article>
-            <!-- Item 7: Caixinha com 4 itens -->
-            <article class="product-card">
-                <div class="img-container" onclick="openModal(this)">
-                    <img src="https://raw.githubusercontent.com/palhinhasdalara/catalogo-natal/main/caixinha-feliz-natal-4-itens-2.jpeg"
-                        alt="Caixinha com 4 Itens" class="product-img">
-                    <div class="zoom-hint">
-                        <svg viewBox="0 0 24 24">
-                            <circle cx="11" cy="11" r="8" />
-                            <path d="m21 21-4.35-4.35" />
-                            <path d="M11 8v6M8 11h6" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div>
-                        <div class="title-row">
-                            <h2 class="card-title">Caixinha com 4 Itens</h2>
-                            <span class="card-price">R$ 32,00</span>
-                        </div>
-                        <p class="card-desc" style="margin-top: 10px;">
-                            Caixinha com 4 itens contendo 1 pote de palha cremosa com colherzinha, 1
-                            brownie artesanal, 1 palha tradicional e 1 bem casado.
-                        </p>
-                        <button type="button" class="card-flavor-link" onclick="openFlavorsModal()">
-                            ✨ Ver sabores clássicos e cremosos
-                        </button>
-                    </div>
-                    <a href="https://wa.me/5582993941787?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20a%20Caixinha%20com%204%20Itens%20(R$%2032,00)."
-                        target="_blank" class="btn-wa-item">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.883 2.802.883h.001c3.18 0 5.766-2.586 5.767-5.766.001-3.18-2.585-5.77-5.77-5.77zm0 10.453c-.768 0-1.522-.206-2.18-.598l-.156-.092-1.619.425.432-1.579-.102-.162c-.432-.688-.66-1.488-.66-2.31 0-2.378 1.935-4.313 4.316-4.313 2.379 0 4.315 1.935 4.315 4.313-.001 2.378-1.936 4.316-4.316 4.316zm7.969-4.687c-.033-.055-.121-.088-.253-.154-.132-.066-.781-.385-.902-.429-.121-.044-.209-.066-.297.066s-.341.429-.418.517-.154.099-.286.033c-.132-.066-.557-.205-1.061-.654-.392-.349-.657-.78-.734-.912s-.008-.204.058-.27c.06-.059.132-.154.198-.231s.088-.132.132-.22c.044-.088.022-.165-.011-.231-.033-.066-.297-.715-.407-.98-.107-.258-.216-.223-.297-.227l-.253-.005c-.088 0-.231.033-.352.165s-.462.451-.462 1.1-.473 1.287.528 1.342c.055.008 1.837 2.806 4.451 3.934.622.269 1.108.429 1.488.55.626.199 1.196.171 1.646.104.502-.075 1.54-.629 1.76-1.236.22-.607.22-1.127.154-1.236z" />
-                        </svg>
-                        Pedir pelo WhatsApp
-                    </a>
-                </div>
-            </article>
-
-        </div>
-
-        <section class="order-notes">
-            <h4>Encomendas de Fim de Ano</h4>
-            <p>Produção artesanal sob demanda com vagas limitadas para o Natal.<br>Combine sua data de entrega e
-                consulte os sabores disponíveis diretamente pelo WhatsApp.</p>
-            <div
-                style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center; margin-top: 16px;">
-                <button type="button" class="btn-open-flavors" onclick="openFlavorsModal()"
-                    style="padding: 8px 18px; font-size: 0.86rem;">
-                    🍬 Ver Lista de Sabores
+        <!-- Menu de Filtros por Linha de Doces (Abordagem B) -->
+        <section class="filter-section">
+            <div class="filter-title">Selecione a Linha de Doces Desejada:</div>
+            <div class="tabs-container">
+                <button type="button" class="tab-btn active" onclick="filterCategory('all', this)">
+                    ✨ Todas as Opções
                 </button>
-                <a href="https://wa.me/5582993941787" target="_blank" class="wa-display-link" style="margin-top: 0;">
+                <button type="button" class="tab-btn" onclick="filterCategory('palha-classica', this)">
+                    Palhas Clássicas
+                </button>
+                <button type="button" class="tab-btn" onclick="filterCategory('palha-cremosa', this)">
+                    Palhas Cremosas
+                </button>
+                <button type="button" class="tab-btn" onclick="filterCategory('brownie', this)">
+                    Brownies de Chocolate
+                </button>
+                <button type="button" class="tab-btn" onclick="filterCategory('bem-casado', this)">
+                    Bem Casados Tradicionais
+                </button>
+            </div>
+        </section>
+
+        <!-- Faixa Informativa Dinâmica -->
+        <div id="categoryNotice" class="category-intro" style="display: none;">
+            <div id="categoryNoticeText"></div>
+            <a onclick="openFlavorsModal()">Ver lista completa de sabores &rarr;</a>
+        </div>
+
+        <!-- Grade de Produtos / Embalagens -->
+        <div class="catalog-list" id="catalogGrid">
+            <!-- Cards gerados dinamicamente a partir dos arquivos em produtos/*.js -->
+        </div>
+
+        <!-- Seção Como Funciona -->
+        <section class="how-it-works">
+            <h3>Como Funciona o Seu Pedido de Lembranças</h3>
+            <p class="subtitle">
+                Cuidamos de cada detalhe com amor artesanal para que seus convidados levem uma recordação inesquecível.
+            </p>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <span class="step-number">1</span>
+                    <h4>Escolha o Doce &amp; Embalagem</h4>
+                    <p>Defina entre Palhas Clássicas, Cremosas, Brownies ou Bem Casados e selecione o formato da
+                        embalagem.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-number">2</span>
+                    <h4>Personalize ao Seu Gosto</h4>
+                    <p>Escolha as cores de fitas, estilo do laço, tecido e envie a arte da sua tag ou monograma dos
+                        noivos.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-number">3</span>
+                    <h4>Reserve sua Data no WhatsApp</h4>
+                    <p>Atendemos sob demanda com vagas limitadas por data para garantir o frescor absoluto dos doces.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Ocasiões de Lembranças -->
+        <section class="occasions-section">
+            <h3>Doces Momentos para Todas as Ocasiões</h3>
+            <p class="lead">
+                Personalizamos as cores, fitas e embalagens de acordo com a proposta e o estilo do seu evento.
+            </p>
+            <div class="occasions-grid">
+                <div class="occasion-item">
+                    <h4>💍 Casamentos &amp; Noivados</h4>
+                    <p>Lembrancinhas elegantes para mesa dos convidados e caixas sofisticadas para homenagear padrinhos.
+                    </p>
+                </div>
+                <div class="occasion-item">
+                    <h4>👶 Maternidade &amp; Chá de Bebê</h4>
+                    <p>Potinhos de palha cremosa com colher de laço e caixinhas delicadas com o nome do bebê.</p>
+                </div>
+                <div class="occasion-item">
+                    <h4>✨ Batizados &amp; Eucaristia</h4>
+                    <p>Combinações de branco com dourado ou prata, transmitindo pureza, delicadeza e agradecimento.</p>
+                </div>
+                <div class="occasion-item">
+                    <h4>🏢 Eventos Corporativos</h4>
+                    <p>Brindes personalizados com a identidade visual da sua empresa para clientes, parceiros e
+                        colaboradores.</p>
+                </div>
+            </div>
+            <a href="https://wa.me/5582993941787?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20lembrancinhas%20personalizadas%20para%20o%20meu%20evento."
+                target="_blank" class="btn-open-flavors"
+                style="background: var(--wine); color: #ffffff; border-color: var(--wine);">
+                💬 Conversar sobre Personalização no WhatsApp
+            </a>
+        </section>
+
+        <!-- Notas de Encomenda -->
+        <section class="order-notes">
+            <h4>Encomendas &amp; Orçamentos Sob Demanda</h4>
+            <p>
+                Produção artesanal com agendamento prévio. Combine a data do seu evento, quantidade e consulte prazos de
+                entrega diretamente pelo WhatsApp.
+            </p>
+            <div
+                style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center; margin-top: 18px;">
+                <button type="button" class="btn-open-flavors" onclick="openFlavorsModal()"
+                    style="padding: 9px 20px; font-size: 0.88rem;">
+                    🍬 Ver Lista Completa de Sabores
+                </button>
+                <a href="https://wa.me/c/558293941787" target="_blank" rel="noopener noreferrer"
+                    class="wa-display-link">
+                    📱 Abrir Catálogo no WhatsApp
+                </a>
+                <a href="https://wa.me/5582993941787" target="_blank" class="wa-display-link">
                     <svg viewBox="0 0 24 24">
                         <path
                             d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.883 2.802.883h.001c3.18 0 5.766-2.586 5.767-5.766.001-3.18-2.585-5.77-5.77-5.77zm0 10.453c-.768 0-1.522-.206-2.18-.598l-.156-.092-1.619.425.432-1.579-.102-.162c-.432-.688-.66-1.488-.66-2.31 0-2.378 1.935-4.313 4.316-4.313 2.379 0 4.315 1.935 4.315 4.313-.001 2.378-1.936 4.316-4.316 4.316zm7.969-4.687c-.033-.055-.121-.088-.253-.154-.132-.066-.781-.385-.902-.429-.121-.044-.209-.066-.297.066s-.341.429-.418.517-.154.099-.286.033c-.132-.066-.557-.205-1.061-.654-.392-.349-.657-.78-.734-.912s-.008-.204.058-.27c.06-.059.132-.154.198-.231s.088-.132.132-.22c.044-.088.022-.165-.011-.231-.033-.066-.297-.715-.407-.98-.107-.258-.216-.223-.297-.227l-.253-.005c-.088 0-.231.033-.352.165s-.462.451-.462 1.1-.473 1.287.528 1.342c.055.008 1.837 2.806 4.451 3.934.622.269 1.108.429 1.488.55.626.199 1.196.171 1.646.104.502-.075 1.54-.629 1.76-1.236.22-.607.22-1.127.154-1.236z" />
@@ -1049,25 +1337,35 @@
         <div class="bottom-inner">
             <div class="bottom-info">
                 <strong>(82) 99394-1787</strong>
-                <span>Atendimento Palhinhas da Lara</span>
+                <span>Palhinhas da Lara | Lembranças</span>
             </div>
-            <a href="https://wa.me/5582993941787?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20encomendas%20de%20Natal."
-                target="_blank" class="btn-direct-chat">
-                <svg viewBox="0 0 24 24">
-                    <path
-                        d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.883 2.802.883h.001c3.18 0 5.766-2.586 5.767-5.766.001-3.18-2.585-5.77-5.77-5.77zm0 10.453c-.768 0-1.522-.206-2.18-.598l-.156-.092-1.619.425.432-1.579-.102-.162c-.432-.688-.66-1.488-.66-2.31 0-2.378 1.935-4.313 4.316-4.313 2.379 0 4.315 1.935 4.315 4.313-.001 2.378-1.936 4.316-4.316 4.316zm7.969-4.687c-.033-.055-.121-.088-.253-.154-.132-.066-.781-.385-.902-.429-.121-.044-.209-.066-.297.066s-.341.429-.418.517-.154.099-.286.033c-.132-.066-.557-.205-1.061-.654-.392-.349-.657-.78-.734-.912s-.008-.204.058-.27c.06-.059.132-.154.198-.231s.088-.132.132-.22c.044-.088.022-.165-.011-.231-.033-.066-.297-.715-.407-.98-.107-.258-.216-.223-.297-.227l-.253-.005c-.088 0-.231.033-.352.165s-.462.451-.462 1.1-.473 1.287.528 1.342c.055.008 1.837 2.806 4.451 3.934.622.269 1.108.429 1.488.55.626.199 1.196.171 1.646.104.502-.075 1.54-.629 1.76-1.236.22-.607.22-1.127.154-1.236z" />
-                </svg>
-                WhatsApp
-            </a>
+            <div class="bottom-actions">
+                <button type="button" class="tab-btn" onclick="openFlavorsModal()"
+                    style="padding: 8px 14px; font-size: 0.82rem;">
+                    🍬 Sabores
+                </button>
+                <a href="https://wa.me/5582993941787?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20lembran%C3%A7as%20de%20evento."
+                    target="_blank" class="btn-direct-chat">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.883 2.802.883h.001c3.18 0 5.766-2.586 5.767-5.766.001-3.18-2.585-5.77-5.77-5.77zm0 10.453c-.768 0-1.522-.206-2.18-.598l-.156-.092-1.619.425.432-1.579-.102-.162c-.432-.688-.66-1.488-.66-2.31 0-2.378 1.935-4.313 4.316-4.313 2.379 0 4.315 1.935 4.315 4.313-.001 2.378-1.936 4.316-4.316 4.316zm7.969-4.687c-.033-.055-.121-.088-.253-.154-.132-.066-.781-.385-.902-.429-.121-.044-.209-.066-.297.066s-.341.429-.418.517-.154.099-.286.033c-.132-.066-.557-.205-1.061-.654-.392-.349-.657-.78-.734-.912s-.008-.204.058-.27c.06-.059.132-.154.198-.231s.088-.132.132-.22c.044-.088.022-.165-.011-.231-.033-.066-.297-.715-.407-.98-.107-.258-.216-.223-.297-.227l-.253-.005c-.088 0-.231.033-.352.165s-.462.451-.462 1.1-.473 1.287.528 1.342c.055.008 1.837 2.806 4.451 3.934.622.269 1.108.429 1.488.55.626.199 1.196.171 1.646.104.502-.075 1.54-.629 1.76-1.236.22-.607.22-1.127.154-1.236z" />
+                    </svg>
+                    WhatsApp
+                </a>
+            </div>
         </div>
     </div>
 
     <!-- Modal Lightbox (Imagens) -->
     <div id="imageModal" class="image-modal" onclick="closeModal(event)">
-        <div class="modal-content-wrapper">
-            <button class="modal-close" onclick="forceCloseModal()">&times;</button>
+        <div class="modal-content-wrapper" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="forceCloseModal()" aria-label="Fechar">&times;</button>
+            <button id="modalPrevBtn" class="modal-nav prev" onclick="navigateModalGallery(-1)" aria-label="Foto anterior">&#10094;</button>
+            <button id="modalNextBtn" class="modal-nav next" onclick="navigateModalGallery(1)" aria-label="Próxima foto">&#10095;</button>
             <img id="modalImg" class="modal-img" src="" alt="Imagem ampliada">
             <div id="modalCaption" class="modal-caption"></div>
+            <div id="modalCounter" class="modal-counter"></div>
+            <div id="modalThumbs" class="modal-thumbs-row"></div>
         </div>
     </div>
 
@@ -1078,7 +1376,7 @@
                 <button class="flavors-modal-close" onclick="forceCloseFlavorsModal()"
                     aria-label="Fechar">&times;</button>
                 <h3>Sabores de Palhas Artesanais</h3>
-                <p>Escolha seus sabores favoritos para montar seus presentes de Natal</p>
+                <p>Receitas preparadas artesanalmente com ingredientes selecionados</p>
             </div>
 
             <div class="flavors-modal-body">
@@ -1088,7 +1386,7 @@
                         <h4>Palhas Clássicas (Tradicionais)</h4>
                         <span class="flavor-count-badge">15 Sabores</span>
                     </div>
-                    <p class="flavor-category-desc">Textura clássica macia com pedacinhos crocantes de biscoito.</p>
+                    <p class="flavor-category-desc">Textura clássica com pedacinhos crocantes de biscoito.</p>
                     <div class="flavor-tags">
                         <span class="flavor-tag">Ameixa</span>
                         <span class="flavor-tag">Amendoim</span>
@@ -1135,7 +1433,7 @@
             </div>
 
             <div class="flavors-modal-footer">
-                <p>Indique seus sabores preferidos ao fazer seu pedido!</p>
+                <p>Indique seus sabores preferidos ao solicitar seu orçamento!</p>
                 <button type="button" class="btn-open-flavors" style="padding: 8px 18px; font-size: 0.85rem;"
                     onclick="forceCloseFlavorsModal()">
                     Fechar
@@ -1144,18 +1442,252 @@
         </div>
     </div>
 
+    <!-- Arquivos modulares de produtos por categoria -->
+    <script src="produtos/palhas-classicas.js"></script>
+    <script src="produtos/palhas-cremosas.js"></script>
+    <script src="produtos/brownies.js"></script>
+    <script src="produtos/bem-casados.js"></script>
+
     <script>
+        // Textos informativos de cada categoria
+        const notices = {
+            'palha-classica': '🍬 <strong>Palhas Clássicas:</strong> Produzidas artesanalmente em 15 sabores diferentes para rechear suas lembranças.',
+            'palha-cremosa': '🥄 <strong>Palhas Cremosas:</strong> Textura sedosa no pote para comer de colher, disponível em 13 sabores irresistíveis.',
+            'brownie': '🍫 <strong>Brownies de Chocolate:</strong> Chocolatudos, macios por dentro e com casquinha crocante.',
+            'bem-casado': '🎀 <strong>Bem Casados Tradicionais:</strong> Receita afetiva tradicional com recheio generoso de doce de leite artesanal.'
+        };
+
+        // Função utilitária para prevenir injeção HTML
+        function escapeHtml(str) {
+            if (!str) return '';
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
+        // Renderiza os produtos a partir de window.PRODUTOS_CATALOGO com suporte a galeria
+        function renderCatalog(categoryFilter) {
+            const grid = document.getElementById('catalogGrid');
+            if (!grid) return;
+
+            const produtos = window.PRODUTOS_CATALOGO || [];
+            const filtrados = (categoryFilter === 'all' || !categoryFilter)
+                ? produtos
+                : produtos.filter(p => p.categoria === categoryFilter);
+
+            if (filtrados.length === 0) {
+                grid.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: 50px 20px; color: #888;">
+                        <p style="font-size: 1.1rem; margin-bottom: 8px;">Nenhuma embalagem cadastrada nesta aba ainda.</p>
+                        <p style="font-size: 0.88rem;">Você pode adicionar novos itens facilmente no arquivo correspondente em <code>produtos/</code>.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = filtrados.map(item => {
+                const waTexto = encodeURIComponent(item.mensagemWhatsapp || ('Olá! Gostaria de um orçamento para ' + item.titulo + '.'));
+                const waLink = 'https://wa.me/5582993941787?text=' + waTexto;
+
+                // Suporte flexível: array fotos: [...] ou foto: "..."
+                const fotos = (Array.isArray(item.fotos) && item.fotos.length > 0)
+                    ? item.fotos
+                    : (item.foto ? [item.foto] : []);
+                const fotoPrincipal = fotos[0] || '';
+                const hasMultiple = fotos.length > 1;
+
+                const galleryBadge = hasMultiple ? `
+                    <span class="gallery-count-badge">
+                        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block;">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                            <circle cx="12" cy="13" r="4"/>
+                        </svg>
+                        ${fotos.length} fotos
+                    </span>
+                ` : '';
+
+                const thumbsHtml = hasMultiple ? `
+                    <div class="card-gallery-thumbs">
+                        ${fotos.map((f, fIdx) => `
+                            <button type="button" class="card-thumb-btn ${fIdx === 0 ? 'active' : ''}" 
+                                    onclick="switchCardPhoto(event, '${escapeHtml(item.id)}', ${fIdx})"
+                                    aria-label="Ver foto ${fIdx + 1}">
+                                <img src="${escapeHtml(f)}" alt="${escapeHtml(item.titulo)}">
+                            </button>
+                        `).join('')}
+                    </div>
+                ` : '';
+
+                const flavorsButton = item.temSabores ? `
+                    <button type="button" class="card-flavor-link" onclick="openFlavorsModal()">
+                        ${escapeHtml(item.textoSabores || '✨ Ver opções de sabores')}
+                    </button>
+                ` : '';
+
+                return `
+                    <article class="product-card" data-category="${escapeHtml(item.categoria)}" data-id="${escapeHtml(item.id)}">
+                        <div class="img-container" onclick="openModal('${escapeHtml(item.id)}')">
+                            <span class="badge-sweet-type">${escapeHtml(item.badge || 'Lembrança')}</span>
+                            ${galleryBadge}
+                            <img src="${escapeHtml(fotoPrincipal)}"
+                                alt="${escapeHtml(item.titulo)}" class="product-img" loading="lazy" data-current-index="0">
+                            <div class="zoom-hint">
+                                <svg viewBox="0 0 24 24">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <path d="m21 21-4.35-4.35" />
+                                    <path d="M11 8v6M8 11h6" />
+                                </svg>
+                            </div>
+                        </div>
+                        ${thumbsHtml}
+                        <div class="card-content">
+                            <div>
+                                <div class="title-row">
+                                    <h2 class="card-title">${escapeHtml(item.titulo)}</h2>
+                                    <span class="card-price">${escapeHtml(item.preco || 'Consulte')}</span>
+                                </div>
+                                <p class="card-desc" style="margin-top: 10px;">
+                                    ${escapeHtml(item.descricao || '')}
+                                </p>
+                                ${flavorsButton}
+                            </div>
+                            <div class="card-actions">
+                                <a href="${waLink}"
+                                    target="_blank" rel="noopener noreferrer" class="btn-wa-item">
+                                    <svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.883 2.802.883h.001c3.18 0 5.766-2.586 5.767-5.766.001-3.18-2.585-5.77-5.77-5.77zm0 10.453c-.768 0-1.522-.206-2.18-.598l-.156-.092-1.619.425.432-1.579-.102-.162c-.432-.688-.66-1.488-.66-2.31 0-2.378 1.935-4.313 4.316-4.313 2.379 0 4.315 1.935 4.315 4.313-.001 2.378-1.936 4.316-4.316 4.316zm7.969-4.687c-.033-.055-.121-.088-.253-.154-.132-.066-.781-.385-.902-.429-.121-.044-.209-.066-.297.066s-.341.429-.418.517-.154.099-.286.033c-.132-.066-.557-.205-1.061-.654-.392-.349-.657-.78-.734-.912s-.008-.204.058-.27c.06-.059.132-.154.198-.231s.088-.132.132-.22c.044-.088.022-.165-.011-.231-.033-.066-.297-.715-.407-.98-.107-.258-.216-.223-.297-.227l-.253-.005c-.088 0-.231.033-.352.165s-.462.451-.462 1.1-.473 1.287.528 1.342c.055.008 1.837 2.806 4.451 3.934.622.269 1.108.429 1.488.55.626.199 1.196.171 1.646.104.502-.075 1.54-.629 1.76-1.236.22-.607.22-1.127.154-1.236z" />
+                                    </svg>
+                                    Solicitar Orçamento
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        // Troca foto exibida no próprio card do produto
+        function switchCardPhoto(event, itemId, photoIndex) {
+            event.stopPropagation();
+            const card = document.querySelector(`.product-card[data-id="${itemId}"]`);
+            if (!card) return;
+            const item = (window.PRODUTOS_CATALOGO || []).find(p => p.id === itemId);
+            if (!item) return;
+            const fotos = (Array.isArray(item.fotos) && item.fotos.length > 0) ? item.fotos : [item.foto];
+            const img = card.querySelector('.product-img');
+            if (img && fotos[photoIndex]) {
+                img.src = fotos[photoIndex];
+                img.setAttribute('data-current-index', photoIndex);
+            }
+            card.querySelectorAll('.card-thumb-btn').forEach((btn, idx) => {
+                btn.classList.toggle('active', idx === photoIndex);
+            });
+        }
+
+        // Filtro por categoria (Abas)
+        function filterCategory(category, button) {
+            if (button) {
+                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+            }
+
+            renderCatalog(category);
+
+            const noticeEl = document.getElementById('categoryNotice');
+            const noticeText = document.getElementById('categoryNoticeText');
+            if (category !== 'all' && notices[category]) {
+                noticeText.innerHTML = notices[category];
+                noticeEl.style.display = 'flex';
+            } else {
+                noticeEl.style.display = 'none';
+            }
+        }
+
+        // Modais de Imagem e Sabores
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImg');
         const modalCaption = document.getElementById('modalCaption');
         const flavorsModal = document.getElementById('flavorsModal');
 
-        function openModal(container) {
-            const img = container.querySelector('.product-img');
-            modalImg.src = img.src;
-            modalCaption.textContent = img.alt;
+        // Estado do Carrossel no Lightbox
+        let currentGalleryItem = null;
+        let currentGalleryIndex = 0;
+
+        function openModal(containerOrItemId, initialIndex) {
+            let itemId = '';
+            if (typeof containerOrItemId === 'string') {
+                itemId = containerOrItemId;
+            } else if (containerOrItemId && containerOrItemId.closest) {
+                const card = containerOrItemId.closest('.product-card');
+                itemId = card ? card.getAttribute('data-id') : '';
+                const img = containerOrItemId.querySelector('.product-img');
+                if (initialIndex === undefined && img && img.getAttribute('data-current-index')) {
+                    initialIndex = parseInt(img.getAttribute('data-current-index'), 10);
+                }
+            }
+
+            const item = (window.PRODUTOS_CATALOGO || []).find(p => p.id === itemId);
+            if (!item) return;
+
+            currentGalleryItem = item;
+            const fotos = (Array.isArray(item.fotos) && item.fotos.length > 0) ? item.fotos : [item.foto];
+            currentGalleryIndex = (typeof initialIndex === 'number' && initialIndex >= 0 && initialIndex < fotos.length) ? initialIndex : 0;
+
+            updateModalGalleryView();
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
+        }
+
+        function updateModalGalleryView() {
+            if (!currentGalleryItem) return;
+            const fotos = (Array.isArray(currentGalleryItem.fotos) && currentGalleryItem.fotos.length > 0) 
+                ? currentGalleryItem.fotos 
+                : [currentGalleryItem.foto];
+
+            if (currentGalleryIndex >= fotos.length) currentGalleryIndex = 0;
+            if (currentGalleryIndex < 0) currentGalleryIndex = fotos.length - 1;
+
+            modalImg.src = fotos[currentGalleryIndex];
+            modalImg.alt = currentGalleryItem.titulo + ' - Foto ' + (currentGalleryIndex + 1);
+            modalCaption.textContent = currentGalleryItem.titulo;
+
+            const prevBtn = document.getElementById('modalPrevBtn');
+            const nextBtn = document.getElementById('modalNextBtn');
+            const counter = document.getElementById('modalCounter');
+            const thumbsContainer = document.getElementById('modalThumbs');
+
+            if (fotos.length > 1) {
+                prevBtn.style.display = 'flex';
+                nextBtn.style.display = 'flex';
+                counter.style.display = 'block';
+                counter.textContent = `Foto ${currentGalleryIndex + 1} de ${fotos.length}`;
+                
+                thumbsContainer.style.display = 'flex';
+                thumbsContainer.innerHTML = fotos.map((f, idx) => `
+                    <img src="${escapeHtml(f)}" class="modal-thumb-item ${idx === currentGalleryIndex ? 'active' : ''}" 
+                         onclick="currentGalleryIndex = ${idx}; updateModalGalleryView();" 
+                         alt="Miniatura ${idx + 1}">
+                `).join('');
+            } else {
+                prevBtn.style.display = 'none';
+                nextBtn.style.display = 'none';
+                counter.style.display = 'none';
+                thumbsContainer.style.display = 'none';
+            }
+        }
+
+        function navigateModalGallery(step) {
+            if (!currentGalleryItem) return;
+            const fotos = (Array.isArray(currentGalleryItem.fotos) && currentGalleryItem.fotos.length > 0) 
+                ? currentGalleryItem.fotos 
+                : [currentGalleryItem.foto];
+            if (fotos.length <= 1) return;
+            currentGalleryIndex = (currentGalleryIndex + step + fotos.length) % fotos.length;
+            updateModalGalleryView();
         }
 
         function closeModal(event) {
@@ -1186,13 +1718,21 @@
         }
 
         document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') {
-                if (modal && modal.classList.contains('active')) forceCloseModal();
-                if (flavorsModal && flavorsModal.classList.contains('active')) forceCloseFlavorsModal();
+            if (modal && modal.classList.contains('active')) {
+                if (e.key === 'Escape') forceCloseModal();
+                if (e.key === 'ArrowLeft') navigateModalGallery(-1);
+                if (e.key === 'ArrowRight') navigateModalGallery(1);
+            }
+            if (flavorsModal && flavorsModal.classList.contains('active')) {
+                if (e.key === 'Escape') forceCloseFlavorsModal();
             }
         });
-    </script>
 
-</body>
+        // Inicializa ao carregar a página
+        document.addEventListener('DOMContentLoaded', function () {
+            const defaultBtn = document.querySelector('.tab-btn.active') || document.querySelector('.tab-btn');
+            filterCategory('all', defaultBtn);
+        });
+    </script></body>
 
 </html>
