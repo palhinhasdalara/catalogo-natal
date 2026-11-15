@@ -7,40 +7,65 @@ window.PRODUTOS_CATALOGO = window.PRODUTOS_CATALOGO || [];
 
 window.PRODUTOS_CATALOGO.push(
     {
-        id: "palha-individual-fita-tag",
+        id: "palha-individual-embalagem-comercial",
         categoria: "palha-classica",
         badge: "Palha Clássica",
-        titulo: "Palha Individual com Fita & Tag",
-        preco: "Consulte",
-        foto: "imagens/palhas-classicas/palha-individual.jpeg",
-        descricao: "Embalada individualmente em celofane transparente ou tecido nobre, finalizada com fita de cetim na paleta do seu evento e tag personalizada com monograma, nomes ou data.",
+        titulo: "Palha Individual - Embalagem Comercial",
+        preco: "R$ 5,60",
+        foto: "imagens/palhas-classicas/palha.jpeg",
+        descricao: "Embalada individualmente em celofane transparente. Pedidos a partir de 10 unidades",
         temSabores: true,
         textoSabores: "✨ Disponível em 15 sabores clássicos",
-        mensagemWhatsapp: "Olá! Gostaria de um orçamento para Lembrancinhas Individuais de Palha Italiana com Fita e Tag."
+        mensagemWhatsapp: "Olá! Gostaria de um orçamento de palhas italiana clássicas na embalagem comercial."
     },
     {
-        id: "palha-caixa-laco-cetim-3",
+        id: "palha-fita",
         categoria: "palha-classica",
         badge: "Palha Clássica",
-        titulo: "Caixa Laço de Cetim (3 Palhas)",
-        preco: "R$ 26,00",
-        foto: "imagens/palhas-classicas/caixinha-3-palhas.jpeg",
-        descricao: "Caixinha fina rígida decorada com fita de cetim acetinado. Recheada com 3 palhas italianas artesanais de sabores à sua escolha. Ideal para padrinhos e homenagens.",
+        titulo: "Palha com fita de cetim",
+        preco: "R$ 6,30",
+        foto: "imagens/palhas-classicas/palha-decorada-1.jpeg",
+        fotos: [
+            "imagens/palhas-classicas/palha-decorada-1.jpeg",
+            "imagens/palhas-classicas/palha-decorada-2.jpeg"
+        ],
+        descricao: "Palha italiana embalada na fita de cetim. Pedidos a partir de 10 unidades.",
         temSabores: true,
-        textoSabores: "✨ Escolha até 3 sabores diferentes",
-        mensagemWhatsapp: "Olá! Gostaria de um orçamento para a Caixinha com Laço de Cetim (3 Palhas Italianas)."
+        textoSabores: "✨ Disponível em 15 sabores clássicos",
+        mensagemWhatsapp: "Olá! Gostaria de um orçamento para palha italiana embalada na fita de cetim."
     },
     {
-        id: "palha-caixa-visor-4",
+        id: "palha-papel-fita",
         categoria: "palha-classica",
         badge: "Palha Clássica",
-        titulo: "Caixa 4 Palhas (Visor)",
-        preco: "R$ 30,00",
-        foto: "imagens/palhas-classicas/caixinha-4-palhas.jpeg",
-        descricao: "Embalagem elegante com visor transparente e berço para 4 palhas artesanais de textura perfeita. Acompanha laço decorativo na cor desejada.",
+        titulo: "Palha com papel crepom e fita de cetim",
+        preco: "R$ 6,80",
+        foto: "imagens/palhas-classicas/palha-decorada-3.jpeg",
+        fotos: [
+            "imagens/palhas-classicas/palha-decorada-3.jpeg",
+            "imagens/palhas-classicas/palha-decorada-4.jpeg",
+            "imagens/palhas-classicas/palha-decorada-5.jpeg"
+        ],
+        descricao: "Palha italiana embalada no papel crepom mais fita de cetim. Pedidos a partir de 10 unidades.",
         temSabores: true,
-        textoSabores: "✨ Escolha até 4 sabores clássicos",
-        mensagemWhatsapp: "Olá! Gostaria de um orçamento para a Caixa com 4 Palhas Italianas (Visor)."
+        textoSabores: "✨ Disponível em 15 sabores clássicos",
+        mensagemWhatsapp: "Olá! Gostaria de um orçamento para palha italiana embalada no papel crepom mais fita de cetim."
+    },
+    {
+        id: "palha-papel-fita-tercinho",
+        categoria: "palha-classica",
+        badge: "Palha Clássica",
+        titulo: "Palha com papel crepom e fita de cetim mais tercinho",
+        preco: "R$ 8,80",
+        foto: "imagens/palhas-classicas/palha-decorada-6.jpeg",
+        fotos: [
+            "imagens/palhas-classicas/palha-decorada-6.jpeg",
+            "imagens/palhas-classicas/palha-decorada-7.jpeg"
+        ],
+        descricao: "Palha italiana embalada no papel crepom mais fita de cetim mais tercinho. Pedidos a partir de 10 unidades.",
+        temSabores: true,
+        textoSabores: "✨ Disponível em 15 sabores clássicos",
+        mensagemWhatsapp: "Olá! Gostaria de um orçamento para palha italiana embalada no papel crepom mais fita de cetim mais tercinho."
     }
 );
 
