@@ -23,7 +23,7 @@ window.PRODUTOS_CATALOGO.push(
         categoria: "brownie",
         badge: "Brownie",
         titulo: "Brownie com Fita de Cetim",
-        preco: "R$ 6,50",
+        preco: "R$ 6,30",
         foto: "imagens/brownies/brownie-decorado-1.jpeg",
         fotos: [
             "imagens/brownies/brownie-decorado-1.jpeg",
