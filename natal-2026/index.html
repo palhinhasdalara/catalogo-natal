@@ -352,6 +352,163 @@
             fill: currentColor;
         }
 
+
+        /* Badge e Miniaturas de Galeria nos Cards */
+        .gallery-count-badge {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: rgba(25, 18, 19, 0.82);
+            backdrop-filter: blur(4px);
+            color: #ffffff;
+            font-size: 0.74rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            z-index: 4;
+            pointer-events: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .card-gallery-thumbs {
+            display: flex;
+            gap: 8px;
+            padding: 10px 14px 4px 14px;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .card-gallery-thumbs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .card-thumb-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid transparent;
+            cursor: pointer;
+            padding: 0;
+            background: none;
+            flex-shrink: 0;
+            transition: all 0.2s ease;
+            opacity: 0.65;
+        }
+
+        .card-thumb-btn:hover {
+            opacity: 1;
+            transform: scale(1.06);
+        }
+
+        .card-thumb-btn.active {
+            border-color: var(--wine);
+            opacity: 1;
+            box-shadow: 0 2px 8px rgba(116, 21, 35, 0.35);
+        }
+
+        .card-thumb-btn img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Controles do Modal de Imagens (Lightbox com Carrossel) */
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: #ffffff;
+            font-size: 26px;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            z-index: 10;
+            user-select: none;
+        }
+
+        .modal-nav:hover {
+            background: rgba(255, 255, 255, 0.55);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .modal-nav.prev {
+            left: -60px;
+        }
+
+        .modal-nav.next {
+            right: -60px;
+        }
+
+        @media (max-width: 768px) {
+            .modal-nav.prev {
+                left: 10px;
+            }
+
+            .modal-nav.next {
+                right: 10px;
+            }
+
+            .modal-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 22px;
+                background: rgba(25, 18, 19, 0.65);
+                border-color: rgba(255, 255, 255, 0.25);
+            }
+        }
+
+        .modal-counter {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.85rem;
+            margin-top: 6px;
+            font-weight: 500;
+        }
+
+        .modal-thumbs-row {
+            display: flex;
+            gap: 8px;
+            margin-top: 14px;
+            max-width: 90vw;
+            overflow-x: auto;
+            padding: 4px;
+        }
+
+        .modal-thumb-item {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 2px solid transparent;
+            opacity: 0.6;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .modal-thumb-item:hover {
+            opacity: 1;
+        }
+
+        .modal-thumb-item.active {
+            border-color: #ffffff;
+            opacity: 1;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+        }
+
         /* Modal Lightbox */
         .image-modal {
             display: none;
@@ -769,8 +926,7 @@
             <!-- Item 1: Brownie na Cinta -->
             <article class="product-card">
                 <div class="img-container" onclick="openModal(this)">
-                    <img src="imagens/brownies-na-cinta.jpeg"
-                        alt="Brownie Boas Festas" class="product-img">
+                    <img src="imagens/brownies-na-cinta.jpeg" alt="Brownie Boas Festas" class="product-img">
                     <div class="zoom-hint">
                         <svg viewBox="0 0 24 24">
                             <circle cx="11" cy="11" r="8" />
@@ -804,8 +960,8 @@
             <!-- Item 2: Caixinha Laço Dourado -->
             <article class="product-card">
                 <div class="img-container" onclick="openModal(this)">
-                    <img src="imagens/caixinha-feliz-natal-3-brownies.jpeg"
-                        alt="Caixinha com Laço de Cetim" class="product-img">
+                    <img src="imagens/caixinha-feliz-natal-3-brownies.jpeg" alt="Caixinha com Laço de Cetim"
+                        class="product-img">
                     <div class="zoom-hint">
                         <svg viewBox="0 0 24 24">
                             <circle cx="11" cy="11" r="8" />
@@ -840,10 +996,10 @@
             </article>
 
             <!-- Item 3: Caixa 4 Palhas -->
-            <article class="product-card">
+            <article class="product-card" data-fotos='["imagens/caixinha-feliz-natal-4-palhas.jpeg", "imagens/caixinha-feliz-natal-4-palhas-2.jpeg"]'>
                 <div class="img-container" onclick="openModal(this)">
-                    <img src="imagens/caixinha-feliz-natal-4-palhas.jpeg"
-                        alt="Caixa 4 Palhas Italianas" class="product-img">
+                    <img src="imagens/caixinha-feliz-natal-4-palhas.jpeg" alt="Caixa 4 Palhas Italianas"
+                        class="product-img">
                     <div class="zoom-hint">
                         <svg viewBox="0 0 24 24">
                             <circle cx="11" cy="11" r="8" />
@@ -878,10 +1034,11 @@
             </article>
 
             <!-- Item 4: Caixa Trio Degustação -->
-            <article class="product-card">
+            <article class="product-card"
+                data-fotos='["imagens/caixinha-feliz-natal-3-itens.jpeg", "imagens/caixinha-feliz-natal-3-itens-2.jpeg"]'>
                 <div class="img-container" onclick="openModal(this)">
-                    <img src="imagens/caixinha-feliz-natal-3-itens.jpeg"
-                        alt="Trio Degustação Especial" class="product-img">
+                    <img src="imagens/caixinha-feliz-natal-3-itens.jpeg" alt="Trio Degustação Especial"
+                        class="product-img">
                     <div class="zoom-hint">
                         <svg viewBox="0 0 24 24">
                             <circle cx="11" cy="11" r="8" />
@@ -919,8 +1076,7 @@
             <!-- Item 5: Potinho de Palha -->
             <article class="product-card">
                 <div class="img-container" onclick="openModal(this)">
-                    <img src="imagens/potinho-palha.jpeg"
-                        alt="Palha Cremosa no Pote" class="product-img">
+                    <img src="imagens/potinho-palha.jpeg" alt="Palha Cremosa no Pote" class="product-img">
                     <div class="zoom-hint">
                         <svg viewBox="0 0 24 24">
                             <circle cx="11" cy="11" r="8" />
@@ -957,8 +1113,7 @@
             <!-- Item 6: Caixinha 4 bombons -->
             <article class="product-card">
                 <div class="img-container" onclick="openModal(this)">
-                    <img src="imagens/caixinha-4-bombons.jpeg"
-                        alt="Caixinha com 4 Bombons" class="product-img">
+                    <img src="imagens/caixinha-4-bombons.jpeg" alt="Caixinha com 4 Bombons" class="product-img">
                     <div class="zoom-hint">
                         <svg viewBox="0 0 24 24">
                             <circle cx="11" cy="11" r="8" />
@@ -991,8 +1146,8 @@
             <!-- Item 7: Caixinha com 4 itens -->
             <article class="product-card">
                 <div class="img-container" onclick="openModal(this)">
-                    <img src="imagens/caixinha-feliz-natal-4-itens-2.jpeg"
-                        alt="Caixinha com 4 Itens" class="product-img">
+                    <img src="imagens/caixinha-feliz-natal-4-itens-2.jpeg" alt="Caixinha com 4 Itens"
+                        class="product-img">
                     <div class="zoom-hint">
                         <svg viewBox="0 0 24 24">
                             <circle cx="11" cy="11" r="8" />
@@ -1005,7 +1160,7 @@
                     <div>
                         <div class="title-row">
                             <h2 class="card-title">Caixinha com 4 Itens</h2>
-                            <span class="card-price">R$ 32,00</span>
+                            <span class="card-price">R$ 35,00</span>
                         </div>
                         <p class="card-desc" style="margin-top: 10px;">
                             Caixinha com 4 itens contendo 1 pote de palha cremosa com colherzinha, 1
@@ -1016,6 +1171,41 @@
                         </button>
                     </div>
                     <a href="https://wa.me/5582993941787?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20a%20Caixinha%20com%204%20Itens%20(R$%2032,00)."
+                        target="_blank" class="btn-wa-item">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.883 2.802.883h.001c3.18 0 5.766-2.586 5.767-5.766.001-3.18-2.585-5.77-5.77-5.77zm0 10.453c-.768 0-1.522-.206-2.18-.598l-.156-.092-1.619.425.432-1.579-.102-.162c-.432-.688-.66-1.488-.66-2.31 0-2.378 1.935-4.313 4.316-4.313 2.379 0 4.315 1.935 4.315 4.313-.001 2.378-1.936 4.316-4.316 4.316zm7.969-4.687c-.033-.055-.121-.088-.253-.154-.132-.066-.781-.385-.902-.429-.121-.044-.209-.066-.297.066s-.341.429-.418.517-.154.099-.286.033c-.132-.066-.557-.205-1.061-.654-.392-.349-.657-.78-.734-.912s-.008-.204.058-.27c.06-.059.132-.154.198-.231s.088-.132.132-.22c.044-.088.022-.165-.011-.231-.033-.066-.297-.715-.407-.98-.107-.258-.216-.223-.297-.227l-.253-.005c-.088 0-.231.033-.352.165s-.462.451-.462 1.1-.473 1.287.528 1.342c.055.008 1.837 2.806 4.451 3.934.622.269 1.108.429 1.488.55.626.199 1.196.171 1.646.104.502-.075 1.54-.629 1.76-1.236.22-.607.22-1.127.154-1.236z" />
+                        </svg>
+                        Pedir pelo WhatsApp
+                    </a>
+                </div>
+            </article>
+
+            <!-- Item 8: Caixinha com 5 Bem Casados -->
+            <article class="product-card"
+                data-fotos='["imagens/caixinha-5-bem-casados.jpeg", "imagens/caixinha-5-bem-casados-2.jpeg"]'>
+                <div class="img-container" onclick="openModal(this)">
+                    <img src="imagens/caixinha-5-bem-casados.jpeg" alt="Caixinha com 5 Bem Casados" class="product-img">
+                    <div class="zoom-hint">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.35-4.35" />
+                            <path d="M11 8v6M8 11h6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div>
+                        <div class="title-row">
+                            <h2 class="card-title">Caixinha com 5 Bem Casados</h2>
+                            <span class="card-price">R$ 37,00</span>
+                        </div>
+                        <p class="card-desc" style="margin-top: 10px;">
+                            Caixa temática natalina decorada com padronagem geométrica e laço nobre. Acompanha 5
+                            deliciosos bem casados artesanais recheados generosamente com doce de leite tradicional.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5582993941787?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20a%20Caixinha%20com%205%20Bem%20Casados%20de%20Natal."
                         target="_blank" class="btn-wa-item">
                         <svg viewBox="0 0 24 24">
                             <path
@@ -1070,10 +1260,16 @@
 
     <!-- Modal Lightbox (Imagens) -->
     <div id="imageModal" class="image-modal" onclick="closeModal(event)">
-        <div class="modal-content-wrapper">
-            <button class="modal-close" onclick="forceCloseModal()">&times;</button>
+        <div class="modal-content-wrapper" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="forceCloseModal()" aria-label="Fechar">&times;</button>
+            <button id="modalPrevBtn" class="modal-nav prev" onclick="navigateModalGallery(-1)"
+                aria-label="Foto anterior">&#10094;</button>
+            <button id="modalNextBtn" class="modal-nav next" onclick="navigateModalGallery(1)"
+                aria-label="Próxima foto">&#10095;</button>
             <img id="modalImg" class="modal-img" src="" alt="Imagem ampliada">
             <div id="modalCaption" class="modal-caption"></div>
+            <div id="modalCounter" class="modal-counter"></div>
+            <div id="modalThumbs" class="modal-thumbs-row"></div>
         </div>
     </div>
 
@@ -1156,12 +1352,102 @@
         const modalCaption = document.getElementById('modalCaption');
         const flavorsModal = document.getElementById('flavorsModal');
 
-        function openModal(container) {
-            const img = container.querySelector('.product-img');
-            modalImg.src = img.src;
-            modalCaption.textContent = img.alt;
+        // Estado do Carrossel de Fotos
+        let currentGalleryCard = null;
+        let currentGalleryFotos = [];
+        let currentGalleryIndex = 0;
+
+        function getCardFotos(card) {
+            const raw = card.getAttribute('data-fotos');
+            if (raw) {
+                try {
+                    if (raw.trim().startsWith('[')) {
+                        return JSON.parse(raw);
+                    } else {
+                        return raw.split(',').map(s => s.trim()).filter(Boolean);
+                    }
+                } catch (e) {
+                    return raw.split(',').map(s => s.trim()).filter(Boolean);
+                }
+            }
+            const img = card.querySelector('.product-img');
+            return img ? [img.src] : [];
+        }
+
+        function openModal(containerOrEl, initialIndex) {
+            const card = containerOrEl.closest('.product-card');
+            if (!card) return;
+
+            currentGalleryCard = card;
+            const fotos = getCardFotos(card);
+            currentGalleryFotos = fotos;
+
+            const cardImg = card.querySelector('.product-img');
+            const currentIndexAttr = cardImg ? cardImg.getAttribute('data-current-index') : null;
+            if (initialIndex === undefined && currentIndexAttr !== null) {
+                initialIndex = parseInt(currentIndexAttr, 10);
+            }
+            currentGalleryIndex = (typeof initialIndex === 'number' && initialIndex >= 0 && initialIndex < fotos.length) ? initialIndex : 0;
+
+            const titleEl = card.querySelector('.card-title');
+            const title = titleEl ? titleEl.textContent : '';
+
+            updateModalGalleryView(title);
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
+        }
+
+        function updateModalGalleryView(titleText) {
+            if (!currentGalleryFotos.length) return;
+            if (currentGalleryIndex >= currentGalleryFotos.length) currentGalleryIndex = 0;
+            if (currentGalleryIndex < 0) currentGalleryIndex = currentGalleryFotos.length - 1;
+
+            modalImg.src = currentGalleryFotos[currentGalleryIndex];
+            if (titleText) modalCaption.textContent = titleText;
+
+            const prevBtn = document.getElementById('modalPrevBtn');
+            const nextBtn = document.getElementById('modalNextBtn');
+            const counter = document.getElementById('modalCounter');
+            const thumbsContainer = document.getElementById('modalThumbs');
+
+            if (currentGalleryFotos.length > 1) {
+                prevBtn.style.display = 'flex';
+                nextBtn.style.display = 'flex';
+                counter.style.display = 'block';
+                counter.textContent = `Foto ${currentGalleryIndex + 1} de ${currentGalleryFotos.length}`;
+
+                thumbsContainer.style.display = 'flex';
+                thumbsContainer.innerHTML = currentGalleryFotos.map((f, idx) => `
+                    <img src="${f}" class="modal-thumb-item ${idx === currentGalleryIndex ? 'active' : ''}" 
+                         onclick="currentGalleryIndex = ${idx}; updateModalGalleryView();" 
+                         alt="Miniatura ${idx + 1}">
+                `).join('');
+            } else {
+                prevBtn.style.display = 'none';
+                nextBtn.style.display = 'none';
+                counter.style.display = 'none';
+                thumbsContainer.style.display = 'none';
+            }
+        }
+
+        function switchCardPhoto(event, btn, fotoUrl, idx) {
+            event.stopPropagation();
+            const card = btn.closest('.product-card');
+            if (!card) return;
+            const img = card.querySelector('.product-img');
+            if (img) {
+                img.src = fotoUrl;
+                img.setAttribute('data-current-index', idx);
+            }
+            card.querySelectorAll('.card-thumb-btn').forEach((b, i) => {
+                b.classList.toggle('active', i === idx);
+            });
+        }
+
+        function navigateModalGallery(step) {
+            if (currentGalleryFotos.length <= 1) return;
+            currentGalleryIndex = (currentGalleryIndex + step + currentGalleryFotos.length) % currentGalleryFotos.length;
+            updateModalGalleryView();
         }
 
         function closeModal(event) {
@@ -1192,13 +1478,53 @@
         }
 
         document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') {
-                if (modal && modal.classList.contains('active')) forceCloseModal();
-                if (flavorsModal && flavorsModal.classList.contains('active')) forceCloseFlavorsModal();
+            if (modal && modal.classList.contains('active')) {
+                if (e.key === 'Escape') forceCloseModal();
+                if (e.key === 'ArrowLeft') navigateModalGallery(-1);
+                if (e.key === 'ArrowRight') navigateModalGallery(1);
+            }
+            if (flavorsModal && flavorsModal.classList.contains('active')) {
+                if (e.key === 'Escape') forceCloseFlavorsModal();
             }
         });
-    </script>
 
+        // Inicializa automaticamente miniaturas e selos nos cards que possuem data-fotos
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.product-card[data-fotos]').forEach(card => {
+                const fotos = getCardFotos(card);
+                if (fotos.length > 1) {
+                    const imgContainer = card.querySelector('.img-container');
+                    if (imgContainer && !imgContainer.querySelector('.gallery-count-badge')) {
+                        const badge = document.createElement('span');
+                        badge.className = 'gallery-count-badge';
+                        badge.innerHTML = `
+                            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block;">
+                                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                                <circle cx="12" cy="13" r="4"/>
+                            </svg>
+                            ${fotos.length} fotos
+                        `;
+                        imgContainer.appendChild(badge);
+                    }
+
+                    if (!card.querySelector('.card-gallery-thumbs')) {
+                        const thumbs = document.createElement('div');
+                        thumbs.className = 'card-gallery-thumbs';
+                        thumbs.innerHTML = fotos.map((f, idx) => `
+                            <button type="button" class="card-thumb-btn ${idx === 0 ? 'active' : ''}" 
+                                    onclick="switchCardPhoto(event, this, '${f}', ${idx})"
+                                    aria-label="Ver foto ${idx + 1}">
+                                <img src="${f}" alt="Miniatura ${idx + 1}">
+                            </button>
+                        `).join('');
+                        if (imgContainer) {
+                            imgContainer.insertAdjacentElement('afterend', thumbs);
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

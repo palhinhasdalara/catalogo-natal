@@ -1210,10 +1210,6 @@
                 </svg>
                 <span>Conheça os <strong>Sabores de Palha Italiana</strong> (15 Clássicos &amp; 13 Cremosos)</span>
             </button>
-            <a href="https://wa.me/c/558293941787" target="_blank" rel="noopener noreferrer"
-                class="btn-wa-catalog-pill">
-                📱 Ver Catálogo no WhatsApp &rarr;
-            </a>
         </div>
 
         <!-- Menu de Filtros por Linha de Doces (Abordagem B) -->
@@ -1235,6 +1231,9 @@
                 <button type="button" class="tab-btn" onclick="filterCategory('bem-casado', this)">
                     Bem Casados Tradicionais
                 </button>
+                <!--<button type="button" class="tab-btn" onclick="filterCategory('kits', this)">
+                    🎁 Caixinhas &amp; Kits
+                </button>-->
             </div>
         </section>
 
@@ -1456,6 +1455,7 @@
     <script src="produtos/palhas-cremosas.js"></script>
     <script src="produtos/brownies.js"></script>
     <script src="produtos/bem-casados.js"></script>
+    <script src="produtos/caixinhas-kits.js"></script>
 
     <script>
         // Textos informativos de cada categoria
@@ -1463,7 +1463,8 @@
             'palha-classica': '🍬 <strong>Palhas Clássicas:</strong> Produzidas artesanalmente em 15 sabores diferentes para rechear suas lembranças.',
             'palha-cremosa': '🥄 <strong>Palhas Cremosas:</strong> Textura cremosa para comer de colherzinha. Disponível em 13 sabores irresistíveis.',
             'brownie': '🍫 <strong>Brownies de Chocolate:</strong> Chocolatudos, macios por dentro e com casquinha crocante.',
-            'bem-casado': '🎀 <strong>Bem Casados Tradicionais:</strong> Receita afetiva tradicional com recheio generoso de doce de leite artesanal.'
+            'bem-casado': '🎀 <strong>Bem Casados Tradicionais:</strong> Receita afetiva tradicional com recheio generoso de doce de leite artesanal.',
+            'kits': '🎁 <strong>Caixinhas &amp; Kits:</strong> Caixas presenteáveis refinadas e combinações especiais para padrinhos, convidados e momentos inesquecíveis.'
         };
 
         // Função utilitária para prevenir injeção HTML
