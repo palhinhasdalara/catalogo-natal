@@ -28,7 +28,8 @@ window.PRODUTOS_CATALOGO.push(
         fotos: [
             "imagens/palhas-cremosas/potinho-decorado-1.jpeg",
             "imagens/palhas-cremosas/potinho-decorado-2.jpeg",
-            "imagens/palhas-cremosas/potinho-decorado-3.jpeg"
+            "imagens/palhas-cremosas/potinho-decorado-3.jpeg",
+            "imagens/palhas-cremosas/potinho-decorado-4.jpeg"
         ],
         descricao: "Uma lembrança delicada e deliciosa! Perfeita para compor a decoração das mais variadas celebrações. Pote com tampo revestido em tecido de algodão cru mais laço de cetim na sua escolha mais colher de madeira. Pedidos a partir de 10 unidades.",
         temSabores: true,

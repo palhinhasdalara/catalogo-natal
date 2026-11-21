@@ -60,7 +60,8 @@ window.PRODUTOS_CATALOGO.push(
         foto: "imagens/palhas-classicas/palha-decorada-6.jpeg",
         fotos: [
             "imagens/palhas-classicas/palha-decorada-6.jpeg",
-            "imagens/palhas-classicas/palha-decorada-7.jpeg"
+            "imagens/palhas-classicas/palha-decorada-7.jpeg",
+            "imagens/palhas-classicas/palha-decorada-12.jpeg"
         ],
         descricao: "Palha italiana embalada no papel crepom mais fita de cetim mais tercinho. Pedidos a partir de 10 unidades.",
         temSabores: true,

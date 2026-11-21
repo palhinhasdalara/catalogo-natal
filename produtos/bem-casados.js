@@ -28,7 +28,8 @@ window.PRODUTOS_CATALOGO.push(
         fotos: [
             "imagens/bem-casados/bem-casado-decorado-1.jpeg",
             "imagens/bem-casados/bem-casado-decorado-2.jpeg",
-            "imagens/bem-casados/bem-casado-decorado-3.jpeg"
+            "imagens/bem-casados/bem-casado-decorado-3.jpeg",
+            "imagens/bem-casados/bem-casado-decorado-6.jpeg"
         ],
         descricao: "Bem casados embalados tradicionalmente, com papel crepom e fita de cetim. Pedidos a partir de 10 unidades.",
         temSabores: false,
